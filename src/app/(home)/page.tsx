@@ -2,11 +2,10 @@ import BackgroundHome from "@/components/BackgroundHome";
 
 export default function Home() {
   return (
-    <section className="">
+    <section className="grid max-xl:place-items-center">
       <BackgroundHome />
-      <div className="mx-[165px] mt-[417px] flex items-end justify-between pb-[128px]">
-        <div className="w-full max-w-[540px]">
-          {" "}
+      <div className="mt-[128px] pb-[128px] max-xl:mx-auto max-xl:text-center xl:mx-[165px] xl:mt-[417px] xl:flex xl:justify-between">
+        <div className="w-full max-w-[560px]">
           <h5 className="font-barlow text-space-blue text-[28px] tracking-[4px] uppercase">
             so, you want to travel to
           </h5>
@@ -18,7 +17,8 @@ export default function Home() {
             world experience!
           </p>
         </div>
-        <div className="relative my-auto flex size-64 cursor-pointer">
+
+        <div className="relative flex size-64 cursor-pointer max-xl:mx-auto max-xl:mt-[66px] xl:my-auto">
           <div className="absolute h-full w-full rounded-full bg-transparent hover:animate-ping hover:bg-white" />
           <button className="font-bellefair size-64 rounded-full bg-white text-[32px] text-black uppercase">
             explore
@@ -28,3 +28,4 @@ export default function Home() {
     </section>
   );
 }
+``;
