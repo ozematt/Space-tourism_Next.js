@@ -1,9 +1,9 @@
-import Background from "@/components/Background";
+import BackgroundHome from "@/components/BackgroundHome";
 
 export default function Home() {
   return (
     <section className="">
-      <Background />
+      <BackgroundHome />
       <div className="mx-[165px] mt-[417px] flex items-end justify-between pb-[128px]">
         <div className="w-full max-w-[540px]">
           {" "}
