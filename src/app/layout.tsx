@@ -1,16 +1,44 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const bellefair = localFont({
+  src: [
+    {
+      path: "./fonts/Bellefair-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-bellefair",
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const barlow = localFont({
+  src: [
+    {
+      path: "./fonts/Barlow-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-barlow",
+});
+
+const barlowCondensed = localFont({
+  src: [
+    {
+      path: "./fonts/BarlowCondensed-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/BarlowCondensed-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-barlow-condensed",
+});
 
 export const metadata: Metadata = {
   title: "Space tourism multi-page website",
@@ -25,7 +53,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body
+        className={`${bellefair.variable} ${barlow.variable} ${barlowCondensed.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
