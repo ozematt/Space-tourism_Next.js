@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bellefair.variable} ${barlow.variable} ${barlowCondensed.variable} antialiased`}
+        className={`${bellefair.variable} ${barlow.variable} ${barlowCondensed.variable} antialiased max-container`}
       >
         {children}
       </body>
