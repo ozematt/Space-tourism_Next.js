@@ -1,10 +1,11 @@
-const PlanetPage = async ({
-  params,
-}: {
-  params: Promise<{ planet: string }>;
-}) => {
+import Destination from "@/components/Destination";
+
+type PlanetPageProps = {
+  params: Promise<{ planet: "moon" | "mars" | "europa" | "titan" }>;
+};
+
+const PlanetPage = async ({ params }: PlanetPageProps) => {
   const planet = (await params).planet;
-  console.log(planet);
 
   return (
     <section>
@@ -19,7 +20,7 @@ const PlanetPage = async ({
           <span className="pr-6 font-bold opacity-50">01</span> pick your
           destination
         </h4>
-        {/* <Image></Image> */}
+        <Destination planet={planet} />
       </div>
     </section>
   );
