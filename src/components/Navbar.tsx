@@ -66,7 +66,7 @@ const Navbar = () => {
           {navLinks.map((navLink, index) => (
             <Link key={navLink.name} href={navLink.href} className="relative">
               <li className="peer pl-8">
-                <span className="pr-1 font-bold">0{index}</span>
+                <span className="pr-2 font-bold">0{index}</span>
                 {navLink.name}
               </li>
 
