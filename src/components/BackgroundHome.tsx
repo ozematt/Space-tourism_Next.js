@@ -7,7 +7,7 @@ const Background = () => {
       <img
         src="/home/background-home-mobile.jpg"
         alt="Mobile Background"
-        className="fixed top-0 left-0 -z-10 object-cover sm:hidden"
+        className="fixed top-0 left-0 -z-10 h-screen w-screen object-cover sm:hidden"
       />
       {/* Tablet */}
       <img

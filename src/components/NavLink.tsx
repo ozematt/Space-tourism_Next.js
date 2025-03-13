@@ -13,7 +13,7 @@ const NavLink = ({ href, number, name }: NavLinkProps) => {
         <span className="pr-1 font-bold">0{number}</span>
         {name}
       </li>
-      <div className="absolute bottom-0 w-full border-2 opacity-0 transition duration-500 ease-in-out peer-hover:opacity-100" />
+      <div className="absolute bottom-0 w-full border-2 opacity-0 transition duration-1000 ease-in-out peer-hover:opacity-100" />
     </Link>
   );
 };
