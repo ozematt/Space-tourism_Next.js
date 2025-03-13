@@ -9,7 +9,7 @@ const navLinks = [
   },
   {
     name: "DESTINATION",
-    href: "/",
+    href: "/destination",
   },
   {
     name: "CREW",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const bellefair = localFont({
   src: [
@@ -54,8 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bellefair.variable} ${barlow.variable} ${barlowCondensed.variable} antialiased max-container`}
+        className={`${bellefair.variable} ${barlow.variable} ${barlowCondensed.variable} max-container antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
