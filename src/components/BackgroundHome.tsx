@@ -4,28 +4,22 @@ const Background = () => {
   return (
     <>
       {/* Mobile */}
-      <Image
+      <img
         src="/home/background-home-mobile.jpg"
         alt="Mobile Background"
-        fill
-        className="top-0 -z-10 object-cover sm:hidden"
-        priority
+        className="fixed top-0 left-0 -z-10 object-cover sm:hidden"
       />
       {/* Tablet */}
-      <Image
+      <img
         src="/home/background-home-tablet.jpg"
         alt="Tablet Background"
-        fill
-        className="top-0 -z-10 hidden object-cover sm:block lg:hidden"
-        priority
+        className="fixed top-0 left-0 -z-10 hidden h-screen w-screen object-cover sm:block lg:hidden"
       />
       {/* Desktop */}
-      <Image
+      <img
         src="/home/background-home-desktop.jpg"
         alt="Desktop Background"
-        fill
         className="fixed top-0 left-0 -z-10 hidden h-screen w-screen object-cover lg:block"
-        priority
       />
     </>
   );
