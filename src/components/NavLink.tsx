@@ -8,10 +8,12 @@ type NavLinkProps = {
 
 const NavLink = ({ href, number, name }: NavLinkProps) => {
   return (
-    <Link href={href} className="relative flex items-center">
-      <span className="pr-1 font-bold peer-hover:text-xl">0{number}</span>
-      <li className="peer">{name}</li>
-      <div className="absolute bottom-[-34px] w-full origin-center scale-x-0 border-2 transition-transform duration-300 ease-out peer-hover:scale-x-100" />
+    <Link href={href} className="relative flex h-full items-center">
+      <li className="peer line-clamp-1">
+        <span className="pr-1 font-bold">0{number}</span>
+        {name}
+      </li>
+      <div className="absolute bottom-0 w-full border-2 opacity-0 transition duration-500 ease-in-out peer-hover:opacity-100" />
     </Link>
   );
 };
