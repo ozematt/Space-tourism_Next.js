@@ -13,7 +13,7 @@ const Destination = ({ planet }: DestinationProps) => {
     <div className="mt-6 flex h-full max-h-[734px] justify-between max-xl:flex-col max-xl:items-center sm:py-16 lg:py-32">
       {/* PLANET IMG */}
       <Image
-        src={planets[planet].image}
+        src={planets[planet]?.image}
         alt={planets[planet].imageAlt}
         width={480}
         height={480}

@@ -1,7 +1,12 @@
-import { Destination, SectionBackground, SectionTitle } from "@/components";
+import {
+  Destination,
+  PlanetName,
+  SectionBackground,
+  SectionTitle,
+} from "@/components";
 
 type PlanetPageProps = {
-  params: Promise<{ planet: "moon" | "mars" | "europa" | "titan" }>;
+  params: Promise<{ planet: PlanetName }>;
 };
 
 const PlanetPage = async ({ params }: PlanetPageProps) => {

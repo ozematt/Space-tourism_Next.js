@@ -9,7 +9,7 @@ export const navLinks = [
   },
   {
     name: "CREW",
-    href: "/crew",
+    href: "/crew/douglasHurley",
   },
   {
     name: "TECHNOLOGY",
