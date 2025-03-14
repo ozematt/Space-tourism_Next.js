@@ -1,3 +1,5 @@
+"use client";
+
 import { navLinks } from "@/data";
 import Link from "next/link";
 

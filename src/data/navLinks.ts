@@ -9,10 +9,10 @@ export const navLinks = [
   },
   {
     name: "CREW",
-    href: "/",
+    href: "/crew",
   },
   {
     name: "TECHNOLOGY",
-    href: "/",
+    href: "/technology",
   },
 ] as const;
