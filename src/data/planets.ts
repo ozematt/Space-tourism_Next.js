@@ -1,3 +1,5 @@
+import { PlanetName } from "@/components";
+
 export const planets = {
   moon: {
     name: "moon",
@@ -41,3 +43,5 @@ export const planets = {
     travelTime: "7 years",
   },
 } as const;
+
+export const planetsArr = Object.keys(planets) as Array<PlanetName>;
