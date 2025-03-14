@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type NavLinkProps = {
+export type NavLinkProps = {
   href: string;
   number: number;
   name: string;

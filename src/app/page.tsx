@@ -1,4 +1,4 @@
-import BackgroundHome from "@/components/BackgroundHome";
+import { BackgroundHome } from "@/components";
 
 export default function Home() {
   return (

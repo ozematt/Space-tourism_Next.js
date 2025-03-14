@@ -1,17 +1,17 @@
 "use client";
 
-import { planets } from "@/data/planets";
+import { planets } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
-type PlanetName = keyof typeof planets;
+export type PlanetName = keyof typeof planets;
 
 const planetsArr = Object.keys(planets) as Array<PlanetName>;
 
-type DestinationProps = {
+export type DestinationProps = {
   planet: PlanetName;
 };
-``;
+
 const Destination = ({ planet }: DestinationProps) => {
   return (
     <div className="mt-6 flex h-full max-h-[734px] justify-between max-xl:flex-col max-xl:items-center sm:py-16 lg:py-32">

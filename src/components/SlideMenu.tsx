@@ -1,4 +1,4 @@
-import { navLinks } from "@/data/navLinks";
+import { navLinks } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 

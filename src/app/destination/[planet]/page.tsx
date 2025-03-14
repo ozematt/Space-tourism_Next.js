@@ -1,4 +1,4 @@
-import Destination from "@/components/Destination";
+import { Destination } from "@/components";
 
 type PlanetPageProps = {
   params: Promise<{ planet: "moon" | "mars" | "europa" | "titan" }>;
