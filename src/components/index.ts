@@ -10,6 +10,8 @@ export { default as SlideMenuCloseIcon } from "./SlideMenuCloseIcon";
 export { default as SlideMenuNavList } from "./SlideMenuNavList";
 export { default as PlanetNavbar } from "./PlanetNavbar";
 export { default as PlanetInfo } from "./PlanetInfo";
+export { default as SectionTitle } from "./SectionTitle";
+export { default as SectionBackground } from "./SectionBackground";
 
 export type { DestinationProps, PlanetName } from "./Destination";
 export type { NavLinkProps } from "./NavLink";
