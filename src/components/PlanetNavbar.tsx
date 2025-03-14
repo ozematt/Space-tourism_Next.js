@@ -1,8 +1,13 @@
+"use client";
 import { planets, planetsArr } from "@/data";
 import Link from "next/link";
 import { PlanetName } from ".";
+import { usePathname } from "next/navigation";
 
 const PlanetNavbar = () => {
+  const pathname = usePathname();
+  const active = pathname.split("/")[2];
+
   return (
     <div className="flex gap-8 max-xl:justify-center sm:mt-20">
       {planetsArr.map((element) => (
@@ -16,7 +21,9 @@ const PlanetNavbar = () => {
           >
             {element}
           </h6>
-          <div className="absolute bottom-[-13px] w-full border-2 opacity-0 transition duration-1000 ease-in-out peer-hover:opacity-100" />
+          <div
+            className={` ${active === element ? "opacity-100" : ""} absolute bottom-[-13px] w-full border-2 opacity-0 transition duration-1000 ease-in-out peer-hover:opacity-100`}
+          />
         </Link>
       ))}
     </div>
