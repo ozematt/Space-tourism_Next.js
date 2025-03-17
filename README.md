@@ -4,7 +4,8 @@
 
 ## 🌍 Live Demo  
 Aplikacja jest dostępna online na Netlify:  
-🔗 [Space Tourism – Live Preview](https://twoja-domena.netlify.app)  
+🔗 [Space Tourism – Live Preview]((https://space-tourism-next-js.netlify.app/))  
+
 
 ## 🛠️ Technologie  
 - **Next.js** – szybkie i wydajne renderowanie stron  
@@ -45,7 +46,7 @@ To install the project, follow the steps below:
    ```
 4. **Otwórz przeglądarkę:**
     ```sh
-   npm install](http://localhost:3000
+   http://localhost:3000
    ```
 
 ## 📌 Funkcje
@@ -56,7 +57,7 @@ To install the project, follow the steps below:
 🎨 Animacje i przejścia między stronami
 
 
-## 📜Licencja
+## 📜 Licencja
 
 Projekt powstał na podstawie wyzwania z Frontend Mentor i jest dostępny do nauki i rozwoju osobistego.
 
