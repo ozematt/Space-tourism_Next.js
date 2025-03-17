@@ -1,5 +1,9 @@
-import { crewMembers } from "@/data";
+"use client";
+
+import { crewMembers, crewMembersArr } from "@/data";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export type CrewMemberName = keyof typeof crewMembers;
 
@@ -8,34 +12,43 @@ export type CrewMemberProps = {
 };
 
 const CrewMember = ({ name }: CrewMemberProps) => {
+  const pathname = usePathname();
+  const isActive = pathname.split("/")[2];
+
   return (
-    <div className="grid grid-cols-2 px-[165px]">
-      <div className="flex h-full w-full max-w-[539px] flex-col">
-        <div className="pt-56">
-          <h4 className="font-bellefair text-[32px] uppercase opacity-50">
+    <div className="justify-between px-20 xl:flex xl:px-40">
+      {/* Text section */}
+      <div className="mx-auto w-full max-w-[539px] py-6 xl:mx-0">
+        <div className="text-center xl:h-[630px] xl:pt-50 xl:text-left">
+          <h4 className="font-bellefair text-2xl uppercase opacity-50 xl:text-[32px]">
             {crewMembers[name].rank}
           </h4>
-          <h2 className="font-bellefair text-[56px] uppercase">
+          <h2 className="font-bellefair pt-4 text-[40px] leading-[46px] uppercase xl:text-[56px] xl:leading-16">
             {crewMembers[name].name}
           </h2>
-          <p className="text-space-blue font-barlow text-lg leading-[180%]">
+          <p className="text-space-blue font-barlow pt-6 text-lg leading-[180%]">
             {crewMembers[name].description}
           </p>
         </div>
 
-        <div className="mt-auto flex gap-10 pt-9">
-          <div className="size-4 cursor-pointer rounded-full bg-white opacity-50 hover:opacity-100" />
-          <div className="size-4 cursor-pointer rounded-full bg-white opacity-50 hover:opacity-100" />
-          <div className="size-4 cursor-pointer rounded-full bg-white opacity-50 hover:opacity-100" />
-          <div className="size-4 cursor-pointer rounded-full bg-white opacity-50 hover:opacity-100" />
+        <div className="flex justify-center gap-4 pt-15 xl:justify-start xl:gap-10 xl:pt-9">
+          {crewMembersArr.map((crewMember) => (
+            <Link href={"/crew/" + crewMember} key={crewMember}>
+              <div
+                className={`size-2.5 xl:size-4 ${isActive === crewMember ? "opacity-100" : ""} cursor-pointer rounded-full bg-white opacity-50 hover:opacity-100`}
+              />
+            </Link>
+          ))}
         </div>
       </div>
 
+      {/* IMG */}
       <Image
         src={crewMembers[name].image}
         alt={crewMembers[name].name + "image"}
-        width={539}
+        width={500}
         height={676}
+        className="mx-auto object-contain xl:mx-0"
       />
     </div>
   );

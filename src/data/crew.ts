@@ -28,3 +28,5 @@ export const crewMembers = {
     image: "/crew/image-anousheh-ansari.webp",
   },
 } as const;
+
+export const crewMembersArr = Object.keys(crewMembers);
