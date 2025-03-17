@@ -1,4 +1,3 @@
-export { default as BackgroundHome } from "./BackgroundHome";
 export { default as Destination } from "./Destination";
 export { default as Logo } from "./Logo";
 export { default as Navbar } from "./Navbar";
@@ -13,6 +12,8 @@ export { default as PlanetInfo } from "./PlanetInfo";
 export { default as SectionTitle } from "./SectionTitle";
 export { default as SectionBackground } from "./SectionBackground";
 export { default as CrewMember } from "./CrewMember";
+export { default as CrewMemberInfo } from "./CrewMemberInfo";
+export { default as CrewNavbar } from "./CrewNavbar";
 
 export type { DestinationProps, PlanetName } from "./Destination";
 export type { CrewMemberProps, CrewMemberName } from "./CrewMember";

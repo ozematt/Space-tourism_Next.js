@@ -1,9 +1,9 @@
-import { BackgroundHome } from "@/components";
+import { SectionBackground } from "@/components";
 
 export default function Home() {
   return (
     <section className="grid max-xl:place-items-center">
-      <BackgroundHome />
+      <SectionBackground />
       <div className="mt-6 pb-[128px] max-xl:mx-auto max-xl:text-center sm:mt-[128px] xl:mx-[165px] xl:mt-[417px] xl:flex xl:justify-between">
         <div className="w-full max-w-[327px] sm:max-w-[560px]">
           <h5 className="font-barlow text-space-blue tracking-[4px] uppercase sm:text-[28px]">
