@@ -18,6 +18,7 @@ const Destination = ({ planet }: DestinationProps) => {
         width={480}
         height={480}
         className="my-6 size-[150px] shrink-0 sm:size-[300px] lg:size-[480px]"
+        priority
       />
 
       <div className="w-full max-xl:text-center sm:px-[87px] lg:px-12 xl:max-w-[539px]">

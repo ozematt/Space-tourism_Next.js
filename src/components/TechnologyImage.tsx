@@ -14,6 +14,7 @@ const TechnologyImage = ({ stage }: TechnologyImageProps) => {
         width={608}
         height={600}
         className="object-contain max-2xl:hidden"
+        priority
       />
       <Image
         src={technologyStage[stage].imageLandscape}
@@ -21,6 +22,7 @@ const TechnologyImage = ({ stage }: TechnologyImageProps) => {
         width={770}
         height={356}
         className="object-cover object-top max-lg:h-[258px] 2xl:hidden"
+        priority
       />
     </>
   );

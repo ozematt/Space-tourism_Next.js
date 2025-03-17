@@ -23,6 +23,7 @@ const CrewMember = ({ name }: CrewMemberProps) => {
         width={500}
         height={676}
         className="mx-auto mt-8 object-contain px-9 sm:px-0 xl:mx-0 xl:mt-0"
+        priority
       />
     </div>
   );
