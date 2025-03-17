@@ -2,7 +2,7 @@
 import { backgroundImages } from "@/data";
 import { usePathname } from "next/navigation";
 
-type PageKeys = "home" | "destination" | "crew" | "technology";
+export type PageKeys = keyof typeof backgroundImages;
 
 const SectionBackground = () => {
   const pathname = usePathname();

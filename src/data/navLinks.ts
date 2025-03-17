@@ -13,6 +13,6 @@ export const navLinks = [
   },
   {
     name: "TECHNOLOGY",
-    href: "/technology",
+    href: "/technology/stageOne",
   },
 ] as const;

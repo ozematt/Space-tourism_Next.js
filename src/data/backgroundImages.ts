@@ -1,5 +1,3 @@
-export type BackgroundImages = keyof typeof backgroundImages;
-
 export const backgroundImages = {
   home: {
     desktop: "/home/background-home-desktop.jpg",
@@ -21,6 +19,8 @@ export const backgroundImages = {
     tablet: "/technology/background-technology-tablet.jpg",
     mobile: "/technology/background-technology-mobile.jpg",
   },
-};
+} as const;
 
 export const backgroundImagesArr = Object.keys(backgroundImages);
+
+export type BackgroundImages = keyof typeof backgroundImages;

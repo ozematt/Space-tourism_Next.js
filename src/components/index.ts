@@ -14,7 +14,9 @@ export { default as SectionBackground } from "./SectionBackground";
 export { default as CrewMember } from "./CrewMember";
 export { default as CrewMemberInfo } from "./CrewMemberInfo";
 export { default as CrewNavbar } from "./CrewNavbar";
+export { default as TechnologyInfo } from "./TechnologyInfo";
 
 export type { DestinationProps, PlanetName } from "./Destination";
 export type { CrewMemberProps, CrewMemberName } from "./CrewMember";
 export type { NavLinkProps } from "./NavLink";
+export type { PageKeys } from "./SectionBackground";
