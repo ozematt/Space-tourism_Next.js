@@ -1,4 +1,4 @@
-# 🚀 Space Tourism  
+# 🪐 Space Tourism 🚀
 
 **Space Tourism** is a multi-page, responsive application based on a **Figma** design provided by [Frontend Mentor](https://www.frontendmentor.io/). The project was created to practice working with a modern tech stack, including **Next.js**, **TypeScript**, and **Tailwind CSS**.  
 
