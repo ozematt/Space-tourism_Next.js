@@ -20,7 +20,7 @@ Aplikacja jest dostępna online na Netlify:
 ✅ Stylizacja przy użyciu Tailwind CSS  
 ✅ Automatyczne wdrażanie za pomocą Netlify  
 
-##📂 Uruchamianie projektu lokalnie 
+## 📂 Uruchamianie projektu lokalnie 
 
 To install the project, follow the steps below:
 
@@ -48,7 +48,7 @@ To install the project, follow the steps below:
    npm install](http://localhost:3000
    ```
 
-##📌 Funkcje
+## 📌 Funkcje
 
 🌍 Wielostronicowa nawigacja
 📱 Responsywny design (mobile, tablet, desktop)
@@ -56,7 +56,7 @@ To install the project, follow the steps below:
 🎨 Animacje i przejścia między stronami
 
 
-##Licencja
+## 📜Licencja
 
 Projekt powstał na podstawie wyzwania z Frontend Mentor i jest dostępny do nauki i rozwoju osobistego.
 
