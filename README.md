@@ -4,7 +4,7 @@
 
 ## 🌍 Live Demo  
 Aplikacja jest dostępna online na Netlify:  
-🔗 [Space Tourism – Live Preview]((https://space-tourism-next-js.netlify.app/))  
+🔗 [Space Tourism – Live Preview](https://space-tourism-next-js.netlify.app/)  
 
 
 ## 🛠️ Technologie  
