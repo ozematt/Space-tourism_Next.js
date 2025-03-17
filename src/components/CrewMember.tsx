@@ -16,17 +16,17 @@ const CrewMember = ({ name }: CrewMemberProps) => {
   const isActive = pathname.split("/")[2];
 
   return (
-    <div className="justify-between px-20 xl:flex xl:px-40">
+    <div className="justify-between px-6 md:px-20 xl:flex xl:px-40">
       {/* Text section */}
       <div className="mx-auto w-full max-w-[539px] py-6 xl:mx-0">
         <div className="text-center xl:h-[630px] xl:pt-50 xl:text-left">
-          <h4 className="font-bellefair text-2xl uppercase opacity-50 xl:text-[32px]">
+          <h4 className="font-bellefair text-lg uppercase opacity-50 sm:text-2xl xl:text-[32px]">
             {crewMembers[name].rank}
           </h4>
-          <h2 className="font-bellefair pt-4 text-[40px] leading-[46px] uppercase xl:text-[56px] xl:leading-16">
+          <h2 className="font-bellefair text-2xl uppercase sm:pt-4 sm:text-[40px] sm:leading-[46px] xl:text-[56px] xl:leading-16">
             {crewMembers[name].name}
           </h2>
-          <p className="text-space-blue font-barlow pt-6 text-lg leading-[180%]">
+          <p className="text-space-blue font-barlow pt-6 text-[15px] leading-[180%] sm:text-lg">
             {crewMembers[name].description}
           </p>
         </div>
@@ -48,7 +48,7 @@ const CrewMember = ({ name }: CrewMemberProps) => {
         alt={crewMembers[name].name + "image"}
         width={500}
         height={676}
-        className="mx-auto object-contain xl:mx-0"
+        className="mx-auto object-contain px-9 sm:px-0 xl:mx-0"
       />
     </div>
   );
