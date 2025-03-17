@@ -1,5 +1,6 @@
 "use client";
 import { backgroundImages } from "@/data";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export type PageKeys = keyof typeof backgroundImages;
@@ -13,23 +14,39 @@ const SectionBackground = () => {
   return (
     <>
       {/* Desktop */}
-      <img
-        src={isActive.desktop}
-        alt="Desktop Background"
-        className="fixed top-0 left-0 -z-10 hidden h-screen w-screen object-cover lg:block"
-      />
+      <div className="fixed top-0 left-0 -z-10 hidden h-screen w-screen lg:block">
+        <Image
+          src={isActive.desktop}
+          alt="Desktop Background"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+        />
+      </div>
+
       {/* Tablet */}
-      <img
-        src={isActive.tablet}
-        alt="Tablet Background"
-        className="fixed top-0 left-0 -z-10 hidden h-screen w-screen object-cover sm:block lg:hidden"
-      />
+      <div className="fixed top-0 left-0 -z-10 hidden h-screen w-screen sm:block lg:hidden">
+        <Image
+          src={isActive.tablet}
+          alt="Tablet Background"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+
       {/* Mobile */}
-      <img
-        src={isActive.mobile}
-        alt="Mobile Background"
-        className="fixed top-0 left-0 -z-10 h-screen w-screen object-cover sm:hidden"
-      />
+      <div className="fixed top-0 left-0 -z-10 h-screen w-screen sm:hidden">
+        <Image
+          src={isActive.mobile}
+          alt="Mobile Background"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+        />
+      </div>
     </>
   );
 };
