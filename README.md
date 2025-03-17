@@ -1,29 +1,28 @@
 # 🚀 Space Tourism  
 
-**Space Tourism** to wielostronicowa, responsywna aplikacja stworzona na podstawie projektu z **Figma** udostępnionego przez [Frontend Mentor](https://www.frontendmentor.io/). Projekt miał na celu przećwiczenie pracy z nowoczesnym stosem technologicznym, w tym **Next.js**, **TypeScript** oraz **Tailwind CSS**.  
+**Space Tourism** is a multi-page, responsive application based on a **Figma** design provided by [Frontend Mentor](https://www.frontendmentor.io/). The project was created to practice working with a modern tech stack, including **Next.js**, **TypeScript**, and **Tailwind CSS**.  
 
 ## 🌍 Live Demo  
-Aplikacja jest dostępna online na Netlify:  
+The application is available online on Netlify:  
 🔗 [Space Tourism – Live Preview](https://space-tourism-next-js.netlify.app/)  
 
+## 🛠️ Technologies  
+- **Next.js** – fast and efficient page rendering  
+- **TypeScript** – improved code organization and type safety  
+- **Tailwind CSS** – quick component styling  
+- **Figma** – design reference for the application  
+- **Netlify** – hosting and automatic deployment  
 
-## 🛠️ Technologie  
-- **Next.js** – szybkie i wydajne renderowanie stron  
-- **TypeScript** – lepsza organizacja kodu i bezpieczeństwo typów  
-- **Tailwind CSS** – szybkie stylowanie komponentów  
-- **Figma** – projekt graficzny aplikacji  
-- **Netlify** – hosting i automatyczne wdrażanie  
+## 🎯 Project Goals  
+✅ Learning and practicing Next.js  
+✅ Utilizing TypeScript for better code quality  
+✅ Building a responsive application based on a Figma design  
+✅ Styling with Tailwind CSS  
+✅ Automating deployment with Netlify  
 
-## 🎯 Cele projektu  
-✅ Nauka i praktyka pracy z Next.js  
-✅ Wykorzystanie TypeScript do poprawy jakości kodu  
-✅ Tworzenie responsywnej aplikacji zgodnej z projektem z Figma  
-✅ Stylizacja przy użyciu Tailwind CSS  
-✅ Automatyczne wdrażanie za pomocą Netlify  
+## 📂 Running the Project Locally  
 
-## 📂 Uruchamianie projektu lokalnie 
-
-To install the project, follow the steps below:
+To install and run the project locally, follow these steps:
 
 1. **Clone the repository:**
    Fork the repository to your GitHub account, and then clone it locally.
@@ -36,31 +35,31 @@ To install the project, follow the steps below:
    cd space-turism_next.js
    ```
    
-3. **Zainstaluj zależności:**
+3. **Install dependencies:**
     ```sh
    npm install
    ```
-4. **Uruchom aplikacje:**
+4. **Run the application:**
     ```sh
-   npm install
+   npm run dev
    ```
-4. **Otwórz przeglądarkę:**
+4. **Open in your browser:**
     ```sh
    http://localhost:3000
    ```
 
-## 📌 Funkcje
+## 📌 Features
 
-🌍 Wielostronicowa nawigacja
-📱 Responsywny design (mobile, tablet, desktop)
-🛠 Dynamiczne pobieranie i wyświetlanie danych
-🎨 Animacje i przejścia między stronami
+🌍 Multi-page navigation
+📱 Responsive design (mobile, tablet, desktop)
+🛠 Dynamic data fetching and display
+🎨 Animations and page transitions
 
 
-## 📜 Licencja
+## 📜 License
 
-Projekt powstał na podstawie wyzwania z Frontend Mentor i jest dostępny do nauki i rozwoju osobistego.
+This project was created based on a challenge from Frontend Mentor and is available for learning and personal development.
 
-📌 Miłej eksploracji kosmosu! 🚀🌌
+Enjoy your space exploration! 🚀
 
 
