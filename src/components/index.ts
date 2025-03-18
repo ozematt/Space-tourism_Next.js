@@ -17,6 +17,7 @@ export { default as CrewNavbar } from "./CrewNavbar";
 export { default as TechnologyInfo } from "./TechnologyInfo";
 export { default as TechnologyImage } from "./TechnologyImage";
 export { default as TechnologyNavbar } from "./TechnologyNavbar";
+export { default as Reservation } from "./Reservation";
 
 export type { DestinationProps, PlanetName } from "./Destination";
 export type { CrewMemberProps, CrewMemberName } from "./CrewMember";
