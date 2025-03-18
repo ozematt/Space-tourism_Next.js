@@ -1,4 +1,5 @@
 import { SectionBackground } from "@/components";
+import Link from "next/link";
 
 export const metadata = {
   title: "Home · Space Tourism",
@@ -24,12 +25,15 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="relative flex size-36 cursor-pointer max-xl:mx-auto max-xl:mt-[66px] sm:size-64 xl:my-auto">
+        <Link
+          href="/reserve"
+          className="relative flex size-36 cursor-pointer max-xl:mx-auto max-xl:mt-[66px] sm:size-64 xl:my-auto"
+        >
           <div className="absolute h-full w-full rounded-full bg-transparent hover:animate-ping hover:bg-white" />
           <button className="font-bellefair size-36 rounded-full bg-white text-lg text-black uppercase sm:size-64 sm:text-[32px]">
             explore
           </button>
-        </div>
+        </Link>
       </div>
     </section>
   );

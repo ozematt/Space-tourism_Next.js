@@ -4,6 +4,10 @@ export const navLinks = [
     href: "/",
   },
   {
+    name: "RESERVE",
+    href: "/reserve",
+  },
+  {
     name: "DESTINATION",
     href: "/destination/moon",
   },
