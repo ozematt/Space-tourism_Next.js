@@ -11,6 +11,10 @@ type StagePageProps = {
   params: Promise<{ stage: TechnologyStage }>;
 };
 
+export const metadata = {
+  title: "Technology · Space Tourism",
+};
+
 const StagePage = async ({ params }: StagePageProps) => {
   const stage = (await params).stage;
 

@@ -1,5 +1,9 @@
 import { SectionBackground } from "@/components";
 
+export const metadata = {
+  title: "Home · Space Tourism",
+};
+
 export default function Home() {
   return (
     <section className="grid max-xl:place-items-center">

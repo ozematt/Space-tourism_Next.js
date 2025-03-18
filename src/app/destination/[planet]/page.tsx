@@ -9,6 +9,10 @@ type PlanetPageProps = {
   params: Promise<{ planet: PlanetName }>;
 };
 
+export const metadata = {
+  title: "Destination · Space Tourism",
+};
+
 const PlanetPage = async ({ params }: PlanetPageProps) => {
   const planet = (await params).planet;
 

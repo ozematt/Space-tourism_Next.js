@@ -9,6 +9,10 @@ type MemberPageProps = {
   params: Promise<{ name: CrewMemberName }>;
 };
 
+export const metadata = {
+  title: "Crew · Space Tourism",
+};
+
 const MemberPage = async ({ params }: MemberPageProps) => {
   const name = (await params).name;
 
