@@ -19,6 +19,11 @@ export const backgroundImages = {
     tablet: "/technology/background-technology-tablet.jpg",
     mobile: "/technology/background-technology-mobile.jpg",
   },
+  reserve: {
+    desktop: "/reserve/background-reserve-desktop.webp",
+    tablet: "/reserve/background-reserve-tablet.webp",
+    mobile: "/reserve/background-reserve-mobile.webp",
+  },
 } as const;
 
 export const backgroundImagesArr = Object.keys(backgroundImages);
