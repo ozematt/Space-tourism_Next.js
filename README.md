@@ -1,4 +1,4 @@
-# 🚀 Space Tourism  
+# 🪐 Space Tourism 🚀
 
 **Space Tourism** is a multi-page, responsive application based on a **Figma** design provided by [Frontend Mentor](https://www.frontendmentor.io/). The project was created to practice working with a modern tech stack, including **Next.js**, **TypeScript**, and **Tailwind CSS**.  
 
@@ -9,7 +9,8 @@ The application is available online on Netlify:
 ## 🛠️ Technologies  
 - **Next.js** – fast and efficient page rendering  
 - **TypeScript** – improved code organization and type safety  
-- **Tailwind CSS** – quick component styling  
+- **Tailwind CSS** – quick component styling
+- **Frame Motion** - page animation
 - **Figma** – design reference for the application  
 - **Netlify** – hosting and automatic deployment  
 
@@ -52,7 +53,6 @@ To install and run the project locally, follow these steps:
 
 🌍 Multi-page navigation
 📱 Responsive design (mobile, tablet, desktop)
-🛠 Dynamic data fetching and display
 🎨 Animations and page transitions
 
 
