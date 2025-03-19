@@ -1,4 +1,4 @@
-import { InputTextField } from ".";
+import { FormStepTitle, InputTextField } from ".";
 
 const Reservation = () => {
   return (
@@ -7,12 +7,10 @@ const Reservation = () => {
         <p className="text-black">hallo</p>
       </div>
       <div className="mx-auto w-full max-w-[450px] py-[54px]">
-        <div>
-          <h3 className="font-bellefair text-4xl uppercase">Personal Info</h3>
-          <p className="font-barlow-condensed text-lg tracking-[0.5px]">
-            Please provide your name, email, and phone number.
-          </p>
-        </div>
+        <FormStepTitle
+          title="Personal Info"
+          description="Please provide your name, email, and phone number."
+        />
 
         <div className="mt-[67px] space-y-12">
           <InputTextField id="name" placeholder="Name" />
