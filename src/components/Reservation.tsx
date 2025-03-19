@@ -4,8 +4,13 @@ const Reservation = () => {
   return (
     <div className="mx-auto mt-[100px] flex h-full max-h-[600px] w-full max-w-[945px] ring-1 ring-white/20 backdrop-blur-[10px]">
       <div className="m-[19px] w-full max-w-[273px] bg-white">
-        <p className="text-black">hallo</p>
+        <div>
+          <div></div>
+          <p></p>
+          <p></p>
+        </div>
       </div>
+
       <div className="mx-auto w-full max-w-[450px] py-[54px]">
         <FormStepTitle
           title="Personal Info"
