@@ -21,7 +21,7 @@ const SectionBackground = () => {
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="sync">
         {/* Desktop */}
         <motion.img
           key={`${pageKey}-desktop`}
