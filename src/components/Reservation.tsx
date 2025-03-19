@@ -1,3 +1,4 @@
+import { steps } from "@/data";
 import { FormStepTitle, InputTextField } from ".";
 
 const Reservation = () => {
@@ -13,8 +14,8 @@ const Reservation = () => {
 
       <div className="mx-auto w-full max-w-[450px] py-[54px]">
         <FormStepTitle
-          title="Personal Info"
-          description="Please provide your name, email, and phone number."
+          title={steps[0].title}
+          description={steps[0].description}
         />
 
         <div className="mt-[67px] space-y-12">
