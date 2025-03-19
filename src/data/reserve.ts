@@ -5,7 +5,7 @@ export const stepsNav = [
   { step: 4, title: "summary" },
 ] as const;
 
-const steps = [
+export const steps = [
   {
     step: 1,
     title: "personal info",
@@ -23,12 +23,13 @@ const steps = [
   },
   {
     step: 4,
-    title: "personal info",
-    description: "Please provide your name, email, and phone number.",
+    title: "finishing up",
+    description: "Duble-check everything looks OK before confirming",
   },
   {
     step: 5,
-    title: "personal info",
-    description: "Please provide your name, email, and phone number.",
+    title: "thank you!",
+    description:
+      "Thank you for choosing Space Tourism! Your booking has been successfully confirmed. You’re one step closer to an unforgettable adventure beyond the stars! ",
   },
-];
+] as const;
