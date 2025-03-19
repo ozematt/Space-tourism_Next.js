@@ -6,18 +6,24 @@ const Reservation = () => {
       <div className="m-[19px] w-full max-w-[273px] bg-white">
         <p className="text-black">hallo</p>
       </div>
-      <div className="mx-auto w-full max-w-[450px] pt-[54px]">
+      <div className="mx-auto w-full max-w-[450px] py-[54px]">
         <div>
           <h3 className="font-bellefair text-4xl uppercase">Personal Info</h3>
           <p className="font-barlow-condensed text-lg tracking-[0.5px]">
             Please provide your name, email, and phone number.
           </p>
         </div>
-        {/* INPUTS */}
+
         <div className="mt-[67px] space-y-12">
           <InputTextField id="name" placeholder="Name" />
           <InputTextField id="email" placeholder="Email Address" />
           <InputTextField id="phone" placeholder="Phone Number" />
+        </div>
+        <div className="flex w-full justify-end pt-[70px]">
+          <div className="my-auto w-full border-t-1 border-white/50" />
+          <button className="font-barlow-condensed shrink-0 rounded-[5px] bg-white/90 px-5 py-2.5 text-xl font-bold tracking-[.5px] text-black uppercase ring-1">
+            next step
+          </button>
         </div>
       </div>
     </div>
