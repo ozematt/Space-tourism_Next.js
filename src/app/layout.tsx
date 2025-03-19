@@ -21,6 +21,11 @@ const barlow = localFont({
       weight: "400",
       style: "normal",
     },
+    {
+      path: "./fonts/Barlow-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
   ],
   variable: "--font-barlow",
 });

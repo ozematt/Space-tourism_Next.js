@@ -1,15 +1,13 @@
-import { steps } from "@/data";
-import { FormStepTitle, InputTextField } from ".";
+import { steps, stepsNav } from "@/data";
+import { FormStepTitle, InputTextField, StepNavItem } from ".";
 
 const Reservation = () => {
   return (
     <div className="mx-auto mt-[100px] flex h-full max-h-[600px] w-full max-w-[945px] ring-1 ring-white/20 backdrop-blur-[10px]">
-      <div className="m-[19px] w-full max-w-[273px] bg-white">
-        <div>
-          <div></div>
-          <p></p>
-          <p></p>
-        </div>
+      <div className="m-[19px] w-full max-w-[273px] space-y-7 bg-[url(/reserve/form-background-reserve-desktop.webp)] px-8 py-10">
+        {stepsNav.map((item) => (
+          <StepNavItem key={item.step} step={item.step} title={item.title} />
+        ))}
       </div>
 
       <div className="mx-auto w-full max-w-[450px] py-[54px]">
@@ -25,7 +23,7 @@ const Reservation = () => {
         </div>
         <div className="flex w-full justify-end pt-[70px]">
           <div className="my-auto w-full border-t-1 border-white/50" />
-          <button className="font-barlow-condensed shrink-0 rounded-[5px] bg-white/90 px-5 py-2.5 text-xl font-bold tracking-[.5px] text-black uppercase ring-1">
+          <button className="font-barlow-condensed shrink-0 rounded-[5px] bg-white/90 px-4.5 py-2.5 text-xl font-bold tracking-[.5px] text-black uppercase ring-1">
             next step
           </button>
         </div>
