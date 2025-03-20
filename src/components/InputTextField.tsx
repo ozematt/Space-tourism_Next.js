@@ -14,7 +14,7 @@ const InputTextField = ({ id, placeholder }: InputTextFieldProps) => {
       />
       <label
         htmlFor={id}
-        className="font-barlow-condensed pointer-events-none absolute top-[-28px] left-0 text-base tracking-[0.5px] transition-all select-none peer-placeholder-shown:top-[9px] peer-placeholder-shown:left-4.5 peer-placeholder-shown:text-xl"
+        className="font-barlow-condensed pointer-events-none absolute top-[-28px] left-0 text-base tracking-[0.5px] transition-all duration-300 ease-in-out select-none peer-placeholder-shown:top-[9px] peer-placeholder-shown:left-4.5 peer-placeholder-shown:text-xl"
       >
         {placeholder}
       </label>

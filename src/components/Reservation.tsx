@@ -6,7 +6,11 @@ const Reservation = () => {
     <div className="mx-auto mt-[100px] flex h-full max-h-[600px] w-full max-w-[945px] ring-1 ring-white/20 backdrop-blur-[10px]">
       <div className="m-[19px] w-full max-w-[273px] space-y-7 bg-[url(/reserve/form-background-reserve-desktop.webp)] px-8 py-10">
         {stepsNav.map((item) => (
-          <StepNavItem key={item.step} step={item.step} title={item.title} />
+          <StepNavItem
+            key={item.step}
+            stepNumber={item.step}
+            title={item.title}
+          />
         ))}
       </div>
 

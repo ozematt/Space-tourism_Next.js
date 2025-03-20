@@ -5,7 +5,7 @@ export const navLinks = [
   },
   {
     name: "RESERVE",
-    href: "/reserve",
+    href: "/reserve/step01",
   },
   {
     name: "DESTINATION",
