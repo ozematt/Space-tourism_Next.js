@@ -24,5 +24,6 @@ export { default as StepNavItem } from "./StepNavItem";
 
 export type { DestinationProps, PlanetName } from "./Destination";
 export type { CrewMemberProps, CrewMemberName } from "./CrewMember";
+export type { ReservationProps, StepNumbers } from "./Reservation";
 export type { NavLinkProps } from "./NavLink";
 export type { PageKeys } from "./SectionBackground";

@@ -1,12 +1,19 @@
-import { Reservation, SectionBackground, SectionTitle } from "@/components";
+import {
+  Reservation,
+  SectionBackground,
+  SectionTitle,
+  StepNumbers,
+} from "@/components";
 
-type StepPageProps = {
+export type StepPageProps = {
   params: Promise<{
-    step: "step01" | "step02" | "step03" | "step04" | "step05";
+    step: StepNumbers;
   }>;
 };
 
-const StepPage = ({ params }: StepPageProps) => {
+const StepPage = async ({ params }: StepPageProps) => {
+  const step = (await params).step;
+
   return (
     <section className="h-screen">
       <SectionBackground />
@@ -14,7 +21,7 @@ const StepPage = ({ params }: StepPageProps) => {
         <SectionTitle number="01" name="make your reservation" />
       </div>
 
-      <Reservation />
+      <Reservation step={step} />
     </section>
   );
 };

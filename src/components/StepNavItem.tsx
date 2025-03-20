@@ -13,7 +13,7 @@ const StepNavItem = ({ stepNumber, title }: StepNavItemProps) => {
         {" "}
         <p className="font-barlow-condensed text-xs leading-[1.2px] tracking-[1.5px] uppercase">
           {" "}
-          step {stepNumber}
+          step 0{stepNumber}
         </p>
         <p className="font-barlow leading-[1.2px] font-bold tracking-[2px] uppercase">
           {title}

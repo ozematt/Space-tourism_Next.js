@@ -1,7 +1,13 @@
 import { steps, stepsNav } from "@/data";
 import { FormStepTitle, InputTextField, StepNavItem } from ".";
 
-const Reservation = () => {
+export type StepNumbers = "step01" | "step02" | "step03" | "step04" | "step05";
+
+export type ReservationProps = {
+  step: StepNumbers;
+};
+
+const Reservation = ({ step }: ReservationProps) => {
   return (
     <div className="mx-auto mt-[100px] flex h-full max-h-[600px] w-full max-w-[945px] ring-1 ring-white/20 backdrop-blur-[10px]">
       <div className="m-[19px] w-full max-w-[273px] space-y-7 bg-[url(/reserve/form-background-reserve-desktop.webp)] px-8 py-10">
