@@ -1,4 +1,3 @@
-import { steps, stepsNav } from "@/data";
 import { FormStepTitle, InputTextField, StepNav, StepNavItem } from ".";
 
 export type StepNumbers = "step01" | "step02" | "step03" | "step04" | "step05";
@@ -11,12 +10,8 @@ const Reservation = ({ step }: ReservationProps) => {
   return (
     <div className="mx-auto mt-[100px] flex h-full max-h-[600px] w-full max-w-[945px] ring-1 ring-white/20 backdrop-blur-[10px]">
       <StepNav />
-
       <div className="mx-auto w-full max-w-[450px] py-[54px]">
-        <FormStepTitle
-          title={steps[0].title}
-          description={steps[0].description}
-        />
+        <FormStepTitle />
 
         <div className="mt-[67px] space-y-12">
           <InputTextField id="name" placeholder="Name" />
