@@ -1,7 +1,7 @@
 "use server";
 
 import { State } from "@/components/Reservation";
-import { stepOneSchema, stepTwoSchema } from "@/lib/schema";
+import { stepOneSchema, stepThreeSchema, stepTwoSchema } from "@/lib/schema";
 import { z } from "zod";
 
 export const formSubmit = async (
@@ -27,18 +27,17 @@ export const formSubmit = async (
       return { ...prevState, destination: data.destination };
     }
 
+    if (step === "step03") {
+      const data = stepThreeSchema.parse({
+        addOns: {
+          lunarHotel: formData.get("lunarHotel"),
+          marsColony: formData.get("marsColony"),
+          titanCamp: formData.get("titanCamp"),
+        },
+      });
+      return { ...prevState, addOns: data.addOns };
+    }
     return {};
-    // if (step === "step02") {
-    //   return {
-    //     name: prevState?.name,
-    //     email: prevState?.email,
-    //     phone: prevState?.phone,
-    //   };
-    // }
-
-    // if (step === "step03") {
-    //   return {};
-    // }
   } catch (error) {
     if (error instanceof z.ZodError) {
       const errors = error.flatten().fieldErrors;
