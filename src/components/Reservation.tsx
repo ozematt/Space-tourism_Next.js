@@ -1,10 +1,16 @@
 "use client";
 import Form from "next/form";
-import { FormStepOne, FormStepTitle, StepNav } from ".";
+import { FormStepOne, FormStepTitle, PlanetName, StepNav } from ".";
 import { useActionState } from "react";
 import { formSubmit } from "@/actions/action";
 
 export type StepNumbers = "step01" | "step02" | "step03" | "step04" | "step05";
+
+export type AddOns = {
+  lunarHotel: boolean;
+  marsColony: boolean;
+  titanCamp: boolean;
+};
 
 export type ReservationProps = {
   step: StepNumbers;
@@ -14,15 +20,25 @@ export type State = {
   name?: string;
   email?: string;
   phone?: string;
+  destination?: PlanetName;
+  addOns?: AddOns;
   errors?: Record<string, string>;
+};
+
+const initialState = {
+  name: "",
+  email: "",
+  phone: "",
+  destination: "",
+  addOns: { lunarHotel: false, marsColony: false, titanCamp: false },
+  errors: {},
 };
 
 const Reservation = ({ step }: ReservationProps) => {
   const [state, formAction, isPending] = useActionState<State, FormData>(
     formSubmit,
-    {} as State,
+    initialState as State,
   );
-  console.log(state);
 
   return (
     <div className="mx-auto mt-[100px] flex h-full max-h-[600px] w-full max-w-[945px] ring-1 ring-white/20 backdrop-blur-[10px]">
