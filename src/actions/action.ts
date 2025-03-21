@@ -1,7 +1,7 @@
 "use server";
 
 import { State } from "@/components/Reservation";
-import { stepOneSchema } from "@/lib/schema";
+import { stepOneSchema, stepTwoSchema } from "@/lib/schema";
 import { z } from "zod";
 
 export const formSubmit = async (
@@ -19,6 +19,14 @@ export const formSubmit = async (
       });
       return { name: data.name, email: data.email, phone: data.phone };
     }
+
+    if (step === "step02") {
+      const data = stepTwoSchema.parse({
+        destination: formData.get("destination"),
+      });
+      return { ...prevState, destination: data.destination };
+    }
+
     return {};
     // if (step === "step02") {
     //   return {
