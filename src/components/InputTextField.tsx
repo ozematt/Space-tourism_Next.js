@@ -1,15 +1,24 @@
 type InputTextFieldProps = {
   id: string;
   placeholder: string;
+  value?: string;
+  error?: string;
 };
 
-const InputTextField = ({ id, placeholder }: InputTextFieldProps) => {
+const InputTextField = ({
+  id,
+  placeholder,
+  value,
+  error,
+}: InputTextFieldProps) => {
   return (
     <div className="relative">
       <input
         type="text"
         id={id}
+        name={id}
         placeholder={placeholder}
+        defaultValue={value}
         className="peer h-[50px] w-full rounded-[5px] pl-4 placeholder-transparent ring-1 ring-white focus:ring-2 focus:ring-white focus:outline-none"
       />
       <label
@@ -18,10 +27,11 @@ const InputTextField = ({ id, placeholder }: InputTextFieldProps) => {
       >
         {placeholder}
       </label>
-      {/* {error && */}
-      <p className="font-barlow-condensed absolute top-[-28px] right-0 text-base tracking-[.5px] text-red-500">
-        Error
-      </p>
+      {error && (
+        <p className="font-barlow-condensed absolute top-[-28px] right-0 text-base tracking-[.5px] text-red-500">
+          {error}
+        </p>
+      )}
     </div>
   );
 };
