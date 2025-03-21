@@ -1,12 +1,25 @@
-type StepNavItemProps = {
-  stepNumber: string;
+"use client";
+import { useParams } from "next/navigation";
+
+type StemItem = {
+  step: string;
   title: string;
 };
 
-const StepNavItem = ({ stepNumber, title }: StepNavItemProps) => {
+type StepNavItemProps = {
+  stepNumber: string;
+  item: StemItem;
+};
+
+const StepNavItem = ({ stepNumber, item }: StepNavItemProps) => {
+  const { step: paramStep } = useParams();
+  const { step: itemStep, title } = item;
+
   return (
     <div className="flex items-center">
-      <div className="font-bellefair grid size-[34px] place-items-center rounded-full uppercase ring-1 ring-white hover:bg-white hover:text-black">
+      <div
+        className={` ${paramStep === itemStep ? "bg-white text-black" : ""} font-bellefair grid size-[34px] place-items-center rounded-full uppercase ring-1 ring-white hover:bg-white hover:text-black`}
+      >
         {stepNumber}
       </div>
       <div className="space-y-4 pl-4">

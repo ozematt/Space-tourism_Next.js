@@ -21,6 +21,7 @@ export { default as Reservation } from "./Reservation";
 export { default as InputTextField } from "./InputTextField";
 export { default as FormStepTitle } from "./FormStepTitle";
 export { default as StepNavItem } from "./StepNavItem";
+export { default as StepNav } from "./StepNav";
 
 export type { DestinationProps, PlanetName } from "./Destination";
 export type { CrewMemberProps, CrewMemberName } from "./CrewMember";

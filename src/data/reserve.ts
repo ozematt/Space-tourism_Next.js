@@ -1,8 +1,8 @@
 export const stepsNav = [
-  { step: "1", title: "your info" },
-  { step: "2", title: "select planet" },
-  { step: "3", title: "add-ons" },
-  { step: "4", title: "summary" },
+  { step: "step01", title: "your info" },
+  { step: "step02", title: "select planet" },
+  { step: "step03", title: "add-ons" },
+  { step: "step04", title: "summary" },
 ] as const;
 
 export const steps = [
