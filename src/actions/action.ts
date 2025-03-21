@@ -41,9 +41,11 @@ export const formSubmit = async (
   } catch (error) {
     if (error instanceof z.ZodError) {
       const errors = error.flatten().fieldErrors;
-      return errors;
+      console.log(errors);
+
+      return { errors: errors };
     }
 
-    return { errors: { general: "Wystąpił nieoczekiwany błąd." } };
+    return { errors: { general: ["Wystąpił nieoczekiwany błąd."] } };
   }
 };

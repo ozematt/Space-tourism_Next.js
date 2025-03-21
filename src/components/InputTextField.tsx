@@ -1,14 +1,14 @@
 type InputTextFieldProps = {
   id: string;
   placeholder: string;
-  value?: string;
+  defaultValue?: string;
   error?: string;
 };
 
 const InputTextField = ({
   id,
   placeholder,
-  value,
+  defaultValue,
   error,
 }: InputTextFieldProps) => {
   return (
@@ -18,7 +18,7 @@ const InputTextField = ({
         id={id}
         name={id}
         placeholder={placeholder}
-        defaultValue={value}
+        defaultValue={defaultValue || ""}
         className="peer h-[50px] w-full rounded-[5px] pl-4 placeholder-transparent ring-1 ring-white focus:ring-2 focus:ring-white focus:outline-none"
       />
       <label
