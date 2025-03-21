@@ -6,7 +6,7 @@ const HamburgerIcon = () => {
       <input type="checkbox" id="menu-toggle" className="peer hidden" />
       <label
         htmlFor="menu-toggle"
-        className="cursor-pointer peer-checked:hidden md:hidden"
+        className="cursor-pointer peer-checked:hidden min-[850px]:hidden"
       >
         {" "}
         <Image
