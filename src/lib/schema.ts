@@ -5,3 +5,7 @@ export const stepOneSchema = z.object({
   email: z.string().min(2, "Niepoprawny adres email"),
   phone: z.string().min(2, "Musi zawierac przynajmniej 9 cyfr"),
 });
+
+export const stepTwoSchema = z.object({
+  destination: z.enum(["moon", "mars", "europa", "titan"]),
+});
