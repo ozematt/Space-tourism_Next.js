@@ -1,6 +1,6 @@
 "use client";
 import { useParams } from "next/navigation";
-import Link from "next/link";
+// import Link from "next/link";
 
 type StemItem = {
   step: string;
@@ -18,13 +18,13 @@ const StepNavItem = ({ stepNumber, item }: StepNavItemProps) => {
 
   return (
     <div className="flex items-center">
-      <Link href={`/reserve/step0${stepNumber}`}>
-        <div
-          className={` ${paramStep === itemStep ? "bg-white text-black" : ""} font-bellefair grid size-[34px] place-items-center rounded-full uppercase ring-1 ring-white hover:bg-white hover:text-black`}
-        >
-          {stepNumber}
-        </div>
-      </Link>
+      {/* <Link href={`/reserve/step0${stepNumber}`}> */}
+      <div
+        className={` ${paramStep === itemStep ? "bg-white text-black" : ""} font-bellefair grid size-[34px] place-items-center rounded-full uppercase ring-1 ring-white`}
+      >
+        {stepNumber}
+      </div>
+      {/* </Link> */}
 
       <div className="hidden space-y-4 pl-4 md:block">
         {" "}

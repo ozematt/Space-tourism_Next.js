@@ -42,7 +42,7 @@ const Reservation = ({ step }: ReservationProps) => {
         action={formAction}
         className="flex w-full flex-col max-md:h-[500px] md:mx-auto md:max-w-[450px] md:py-[54px]"
       >
-        <div className="top-[120px] left-[50%] mx-auto w-[90%] px-6 py-10 max-md:absolute max-md:transform-[translateX(-50%)] md:w-full md:max-w-[450px] md:p-0">
+        <div className="top-[120px] left-[50%] mx-auto w-[90%] px-6 py-10 ring-[.5px] ring-white/20 max-md:absolute max-md:transform-[translateX(-50%)] md:w-full md:max-w-[450px] md:p-0 md:ring-0">
           <div className="absolute inset-0 -z-10 opacity-100 backdrop-blur-[10px] md:opacity-0" />
           <div className="absolute inset-0 -z-20 bg-[url(/reserve/background-reserve-tablet.webp)] bg-cover opacity-90 md:opacity-0" />
           <FormStepTitle />
@@ -61,7 +61,7 @@ const Reservation = ({ step }: ReservationProps) => {
 
           <button
             type="submit"
-            className="font-barlow-condensed shrink-0 rounded-[5px] bg-white/90 px-4.5 py-2.5 text-xl font-bold tracking-[.5px] text-black uppercase ring-1"
+            className="font-barlow-condensed test-sm shrink-0 rounded-[5px] bg-white/90 px-4.5 py-2.5 font-bold tracking-[.5px] text-black uppercase ring-1 sm:text-xl"
             disabled={isPending}
           >
             {/* <Link
