@@ -62,7 +62,7 @@ const Reservation = ({ step }: ReservationProps) => {
           )}
           {step === "step02" && (
             <div className="mt-[67px] space-y-12">
-              <FormStepTwo {...state} />
+              <FormStepTwo />
             </div>
           )}
         </div>
