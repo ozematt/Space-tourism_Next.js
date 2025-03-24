@@ -1,7 +1,7 @@
 type InputTextFieldProps = {
   id: string;
   placeholder: string;
-  defaultValue?: string;
+  defaultValue?: FormDataEntryValue | string;
   error?: string[];
 };
 
@@ -18,7 +18,7 @@ const InputTextField = ({
         id={id}
         name={id}
         placeholder={placeholder}
-        defaultValue={defaultValue || ""}
+        defaultValue={(defaultValue as string) || ""}
         className={` ${error ? "ring-red-500 focus:ring-red-500" : "ring-white focus:ring-white"} peer h-[50px] w-full rounded-[5px] pl-4 placeholder-transparent ring-1 focus:ring-2 focus:outline-none`}
       />
       <label

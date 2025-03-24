@@ -3,6 +3,7 @@ import { State } from "./Reservation";
 
 const FormStepOne = (state: State) => {
   const { name, email, phone, errors } = state;
+
   return (
     <>
       <InputTextField

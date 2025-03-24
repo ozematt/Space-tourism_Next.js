@@ -21,6 +21,7 @@ export const formSubmit = async (
         ...prevState,
         ...data,
         errors: undefined,
+        nextStep: 2,
       };
     }
 
@@ -28,7 +29,7 @@ export const formSubmit = async (
       const data = stepTwoSchema.parse({
         destination: formData.get("destination"),
       });
-      return { ...prevState, ...data, errors: undefined };
+      return { ...prevState, ...data, errors: undefined, nextStep: 3 };
     }
 
     if (step === "step03") {
@@ -39,7 +40,7 @@ export const formSubmit = async (
           titanCamp: formData.get("titanCamp"),
         },
       });
-      return { ...prevState, ...data, errors: undefined };
+      return { ...prevState, ...data, errors: undefined, nextStep: 4 };
     }
     return prevState;
   } catch (error) {
@@ -48,17 +49,17 @@ export const formSubmit = async (
       name: formData.get("name") || prevState.name,
       email: formData.get("email") || prevState.email,
       phone: formData.get("phone") || prevState.phone,
-      // destination: formData.get("destination") || prevState.destination,
-      // addOns: {
-      //   lunarHotel: formData.get("lunarHotel") || prevState.addOns?.lunarHotel,
-      //   marsColony: formData.get("marsColony") || prevState.addOns?.marsColony,
-      //   titanCamp: formData.get("titanCamp") || prevState.addOns?.titanCamp,
-      // }
+      destination: formData.get("destination") || prevState.destination,
+      addOns: {
+        lunarHotel: formData.get("lunarHotel") || prevState.addOns?.lunarHotel,
+        marsColony: formData.get("marsColony") || prevState.addOns?.marsColony,
+        titanCamp: formData.get("titanCamp") || prevState.addOns?.titanCamp,
+      },
     };
 
     if (error instanceof z.ZodError) {
       return {
-        ...currentState, // Zwracamy wszystkie aktualne wartości pól
+        ...currentState, // actual form state
         errors: error.flatten().fieldErrors,
       };
     }

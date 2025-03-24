@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link href="/" className="shrink-0 md:px-[40px] lg:px-[64px]">
+    <Link href="/" className="shrink-0 px-0 min-[850px]:px-[40px] lg:px-[64px]">
       <Image
         src="/icons/logo.svg"
         alt="logo"

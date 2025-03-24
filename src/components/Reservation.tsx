@@ -1,15 +1,15 @@
 "use client";
 import Form from "next/form";
 import { FormStepOne, FormStepTitle, PlanetName, StepNav } from ".";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { formSubmit } from "@/actions/action";
 
 export type StepNumbers = "step01" | "step02" | "step03" | "step04" | "step05";
 
 export type AddOns = {
-  lunarHotel: boolean;
-  marsColony: boolean;
-  titanCamp: boolean;
+  lunarHotel?: boolean | FormDataEntryValue;
+  marsColony?: boolean | FormDataEntryValue;
+  titanCamp?: boolean | FormDataEntryValue;
 };
 
 export type ReservationProps = {
@@ -17,12 +17,13 @@ export type ReservationProps = {
 };
 
 export type State = {
-  name?: FormDataEntryValue;
-  email?: FormDataEntryValue;
-  phone?: FormDataEntryValue;
-  destination?: PlanetName;
+  name?: FormDataEntryValue | string;
+  email?: FormDataEntryValue | string;
+  phone?: FormDataEntryValue | string;
+  destination?: PlanetName | FormDataEntryValue;
   addOns?: AddOns;
   errors?: Record<string, string[] | undefined>;
+  nextStep?: number;
 };
 
 const Reservation = ({ step }: ReservationProps) => {
@@ -30,10 +31,11 @@ const Reservation = ({ step }: ReservationProps) => {
     formSubmit,
     {} as State,
   );
+
   console.log(state);
 
   return (
-    <div className="mx-auto mt-[100px] flex h-full max-h-[600px] w-full max-w-[945px] ring-1 ring-white/20 backdrop-blur-[10px]">
+    <div className="mx-auto mt-[100px] flex h-full max-h-[600px] w-full max-w-[945px] pr-8 ring-1 ring-white/20 backdrop-blur-[10px]">
       <StepNav />
       <Form
         action={formAction}
@@ -55,6 +57,7 @@ const Reservation = ({ step }: ReservationProps) => {
           <button
             type="submit"
             className="font-barlow-condensed shrink-0 rounded-[5px] bg-white/90 px-4.5 py-2.5 text-xl font-bold tracking-[.5px] text-black uppercase ring-1"
+            disabled={isPending}
           >
             {/* <Link
               href={state.errors ? "" : `/reserve/step0${Number(step[5]) + 1}`}
