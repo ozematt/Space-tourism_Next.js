@@ -17,14 +17,18 @@ export const formSubmit = async (
         email: formData.get("email"),
         phone: formData.get("phone"),
       });
-      return { name: data.name, email: data.email, phone: data.phone };
+      return {
+        ...prevState,
+        ...data,
+        errors: undefined,
+      };
     }
 
     if (step === "step02") {
       const data = stepTwoSchema.parse({
         destination: formData.get("destination"),
       });
-      return { ...prevState, destination: data.destination };
+      return { ...prevState, ...data, errors: undefined };
     }
 
     if (step === "step03") {
@@ -35,17 +39,33 @@ export const formSubmit = async (
           titanCamp: formData.get("titanCamp"),
         },
       });
-      return { ...prevState, addOns: data.addOns };
+      return { ...prevState, ...data, errors: undefined };
     }
-    return {};
+    return prevState;
   } catch (error) {
-    if (error instanceof z.ZodError) {
-      const errors = error.flatten().fieldErrors;
-      console.log(errors);
+    const currentState: State = {
+      ...prevState,
+      name: formData.get("name") || prevState.name,
+      email: formData.get("email") || prevState.email,
+      phone: formData.get("phone") || prevState.phone,
+      // destination: formData.get("destination") || prevState.destination,
+      // addOns: {
+      //   lunarHotel: formData.get("lunarHotel") || prevState.addOns?.lunarHotel,
+      //   marsColony: formData.get("marsColony") || prevState.addOns?.marsColony,
+      //   titanCamp: formData.get("titanCamp") || prevState.addOns?.titanCamp,
+      // }
+    };
 
-      return { errors: errors };
+    if (error instanceof z.ZodError) {
+      return {
+        ...currentState, // Zwracamy wszystkie aktualne wartości pól
+        errors: error.flatten().fieldErrors,
+      };
     }
 
-    return { errors: { general: ["Wystąpił nieoczekiwany błąd."] } };
+    return {
+      ...currentState,
+      errors: { general: ["An unexpected error occurred."] },
+    };
   }
 };

@@ -2,7 +2,7 @@ type InputTextFieldProps = {
   id: string;
   placeholder: string;
   defaultValue?: string;
-  error?: string;
+  error?: string[];
 };
 
 const InputTextField = ({

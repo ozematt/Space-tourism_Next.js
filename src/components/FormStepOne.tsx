@@ -1,11 +1,6 @@
 import { InputTextField } from ".";
 import { State } from "./Reservation";
 
-type FormStepOneProps = {
-  defaultValues?: string;
-  errors?: string;
-};
-
 const FormStepOne = (state: State) => {
   const { name, email, phone, errors } = state;
   return (

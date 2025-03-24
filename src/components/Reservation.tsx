@@ -3,8 +3,6 @@ import Form from "next/form";
 import { FormStepOne, FormStepTitle, PlanetName, StepNav } from ".";
 import { useActionState } from "react";
 import { formSubmit } from "@/actions/action";
-import Link from "next/link";
-import { error } from "console";
 
 export type StepNumbers = "step01" | "step02" | "step03" | "step04" | "step05";
 
@@ -19,9 +17,9 @@ export type ReservationProps = {
 };
 
 export type State = {
-  name?: string;
-  email?: string;
-  phone?: string;
+  name?: FormDataEntryValue;
+  email?: FormDataEntryValue;
+  phone?: FormDataEntryValue;
   destination?: PlanetName;
   addOns?: AddOns;
   errors?: Record<string, string[] | undefined>;
