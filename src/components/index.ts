@@ -23,6 +23,7 @@ export { default as FormStepTitle } from "./FormStepTitle";
 export { default as StepNavItem } from "./StepNavItem";
 export { default as StepNav } from "./StepNav";
 export { default as FormStepOne } from "./FormStepOne";
+export { default as FormStepTwo } from "./FormStepTwo";
 
 export type { DestinationProps, PlanetName } from "./Destination";
 export type { CrewMemberProps, CrewMemberName } from "./CrewMember";

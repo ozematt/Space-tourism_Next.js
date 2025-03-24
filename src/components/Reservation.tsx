@@ -1,6 +1,12 @@
 "use client";
 import Form from "next/form";
-import { FormStepOne, FormStepTitle, PlanetName, StepNav } from ".";
+import {
+  FormStepOne,
+  FormStepTitle,
+  FormStepTwo,
+  PlanetName,
+  StepNav,
+} from ".";
 import { useActionState } from "react";
 import { formSubmit } from "@/actions/action";
 
@@ -52,6 +58,11 @@ const Reservation = ({ step }: ReservationProps) => {
           {step === "step01" && (
             <div className="mt-[67px] space-y-12">
               <FormStepOne {...state} />
+            </div>
+          )}
+          {step === "step02" && (
+            <div className="mt-[67px] space-y-12">
+              <FormStepTwo {...state} />
             </div>
           )}
         </div>
