@@ -17,8 +17,10 @@ const FormStepTitle = () => {
 
   return (
     <div>
-      <h3 className="font-bellefair text-4xl uppercase">{stepHeader}</h3>
-      <p className="font-barlow-condensed text-lg tracking-[0.5px]">
+      <h3 className="font-bellefair text-2xl uppercase sm:text-4xl">
+        {stepHeader}
+      </h3>
+      <p className="font-barlow-condensed text-base tracking-[0.5px] sm:text-lg">
         {description}
       </p>
     </div>

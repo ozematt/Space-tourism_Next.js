@@ -25,7 +25,8 @@ const StepNavItem = ({ stepNumber, item }: StepNavItemProps) => {
           {stepNumber}
         </div>
       </Link>
-      <div className="space-y-4 pl-4">
+
+      <div className="hidden space-y-4 pl-4 md:block">
         {" "}
         <p className="font-barlow-condensed text-xs leading-[1.2px] tracking-[1.5px] uppercase">
           {" "}

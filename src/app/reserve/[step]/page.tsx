@@ -20,7 +20,7 @@ const StepPage = async ({ params }: StepPageProps) => {
       <div className="mx-10 my-6 sm:my-12 lg:mx-40">
         <SectionTitle number="01" name="make your reservation" />
       </div>
-      <div className="px-6">
+      <div className="sm:px-6">
         <Reservation step={step} />
       </div>
     </section>
