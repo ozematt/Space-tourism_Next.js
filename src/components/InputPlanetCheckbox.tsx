@@ -20,7 +20,7 @@ const InputPlanetCheckbox = ({ planet }: InputPlanetCheckboxProps) => {
       />
       <label
         htmlFor={name}
-        className="hover:bg-opacity-20 translate-all flex h-[130px] w-[218px] cursor-pointer flex-col rounded-[5px] p-4 ring-[.5px] duration-500 ease-in-out peer-checked:bg-white/10 peer-checked:ring-2 hover:bg-white/10"
+        className="hover:bg-opacity-20 translate-all flex h-[130px] cursor-pointer flex-col rounded-[5px] p-4 ring-[.5px] duration-500 ease-in-out peer-checked:bg-white/10 peer-checked:ring-2 hover:bg-white/10"
       >
         {/* Planet */}
         <div className="flex w-full justify-between">
