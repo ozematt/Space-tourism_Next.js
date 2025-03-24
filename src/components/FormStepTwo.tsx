@@ -3,7 +3,7 @@ import InputPlanetCheckbox from "./InputPlanetCheckbox";
 
 const FormStepTwo = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <div className="middle:grid-cols-2 grid grid-cols-1 gap-4">
       {planetsArr.map((planet) => (
         <InputPlanetCheckbox key={planet} planet={planet} />
       ))}
