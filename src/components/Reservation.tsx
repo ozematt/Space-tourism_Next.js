@@ -48,27 +48,27 @@ const Reservation = ({ step }: ReservationProps) => {
 
       <Form
         action={formAction}
-        className="middle:pt-[54px] flex w-full flex-col max-md:h-[500px] md:mx-auto md:max-w-[450px] md:pt-8"
+        className="mx-auto flex w-full flex-col max-md:h-[500px] md:max-w-[450px]"
       >
-        <div className="top-[120px] left-[50%] mx-auto w-[90%] px-6 py-10 ring-[.5px] ring-white/20 max-md:absolute max-md:transform-[translateX(-50%)] md:w-full md:max-w-[450px] md:p-0 md:ring-0">
+        <div className="top-[120px] left-[50%] w-[90%] px-6 ring-[.5px] ring-white/20 max-md:absolute max-md:transform-[translateX(-50%)] md:w-full md:max-w-[450px] md:p-0 md:ring-0">
           <FormBackground />
-
-          <FormStepTitle />
 
           <input type="hidden" name="step" value={step} />
 
           {step === "step01" && (
-            <>
-              <div className="mt-[67px] space-y-12">
+            <div className="my-8 md:my-[67px]">
+              <FormStepTitle />
+              <div className="mt-12 space-y-8 md:mt-[67px] md:space-y-12">
                 <FormStepOne {...state} />
               </div>
-              <div className="px-8 pt-[450px] md:px-0 md:pt-[70px]">
+              {/* <div className="pt-[70px]">
                 <FormButtonPanel step={step} isPending={isPending} />
-              </div>
-            </>
+              </div> */}
+            </div>
           )}
           {step === "step02" && (
             <>
+              <FormStepTitle />
               <div className="middle:mt-[50px] mt-[30px]">
                 <FormStepTwo />
               </div>
@@ -78,7 +78,9 @@ const Reservation = ({ step }: ReservationProps) => {
             </>
           )}
         </div>
-        {/* <FormButtonPanel step={step} isPending={isPending} /> */}
+        <div className="absolute bottom-0 left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
+          <FormButtonPanel step={step} isPending={isPending} />
+        </div>
       </Form>
     </div>
   );
