@@ -3,10 +3,9 @@ import Link from "next/link";
 type FormButtonPanelProps = {
   step: string;
   isPending: boolean;
-  errors?: Record<string, string[] | undefined>;
 };
 
-const FormButtonPanel = ({ step, isPending, errors }: FormButtonPanelProps) => {
+const FormButtonPanel = ({ step, isPending }: FormButtonPanelProps) => {
   return (
     <div className="flex w-full justify-end">
       <Link

@@ -1,13 +1,28 @@
+"use client";
 import { planets } from "@/data";
 import { PlanetName } from "./Destination";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 type InputPlanetCheckboxProps = {
   planet: PlanetName;
+  defaultValue?: FormDataEntryValue | PlanetName;
 };
 
-const InputPlanetCheckbox = ({ planet }: InputPlanetCheckboxProps) => {
+const InputPlanetCheckbox = ({
+  planet,
+  defaultValue,
+}: InputPlanetCheckboxProps) => {
   const { name, image, imageAlt, travelTime, cost } = planets[planet];
+
+  const [checked, setChecked] = useState(false);
+  console.log(name, checked);
+
+  useEffect(() => {
+    if (defaultValue === name) {
+      setChecked(true);
+    }
+  }, [defaultValue, name]);
 
   return (
     <div className="relative">
@@ -16,6 +31,8 @@ const InputPlanetCheckbox = ({ planet }: InputPlanetCheckboxProps) => {
         name="destination"
         value={name}
         id={name}
+        checked={checked}
+        onChange={() => setChecked(true)}
         className="peer absolute inset-0 hidden"
       />
       <label

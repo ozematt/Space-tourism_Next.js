@@ -9,8 +9,9 @@ import {
   PlanetName,
   StepNav,
 } from ".";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { formSubmit } from "@/actions/action";
+import { useRouter } from "next/navigation";
 
 export type StepNumbers = "step01" | "step02" | "step03" | "step04" | "step05";
 
@@ -35,12 +36,30 @@ export type State = {
 };
 
 const Reservation = ({ step }: ReservationProps) => {
+  const router = useRouter();
   const [state, formAction, isPending] = useActionState<State, FormData>(
     formSubmit,
     { nextStep: 1 } as State,
   );
+  useEffect(() => {
+    if (!state || state.nextStep === 1) return;
 
-  console.log(state);
+    const storedState = localStorage.getItem("formState");
+    const actualState = storedState ? JSON.parse(storedState) : {};
+
+    const newState = { ...actualState, ...state };
+    localStorage.setItem("formState", JSON.stringify(newState));
+  }, [state]);
+
+  useEffect(() => {
+    if (state.nextStep === 2) {
+      router.push("/reserve/step02");
+    } else if (state.nextStep === 3) {
+      router.push("/reserve/step03");
+    } else if (state.nextStep === 4) {
+      router.push("/reserve/step04");
+    }
+  }, [state.nextStep, router]);
 
   return (
     <div className="relative mx-auto mt-[50px] h-full w-full max-w-[945px] ring-white/20 sm:mt-[100px] md:flex md:pr-8 md:ring-1 md:backdrop-blur-[10px]">
@@ -64,11 +83,7 @@ const Reservation = ({ step }: ReservationProps) => {
                 </div>
               </div>
               <div className="absolute bottom-[-50%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
-                <FormButtonPanel
-                  step={step}
-                  isPending={isPending}
-                  errors={state.errors}
-                />
+                <FormButtonPanel step={step} isPending={isPending} />
               </div>
             </>
           )}
@@ -77,7 +92,7 @@ const Reservation = ({ step }: ReservationProps) => {
               <div className="middle:my-[67px] my-10">
                 <FormStepTitle />
                 <div className="middle:mt-[50px] mt-[30px]">
-                  <FormStepTwo />
+                  <FormStepTwo {...state} />
                 </div>
               </div>
               <div className="absolute bottom-[-40%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
