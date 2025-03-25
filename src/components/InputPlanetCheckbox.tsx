@@ -30,7 +30,7 @@ const InputPlanetCheckbox = ({ planet }: InputPlanetCheckboxProps) => {
             height={40}
             alt={imageAlt}
             className="size-10 rounded-full"
-          ></Image>
+          />
           <p className="font-barlow-condensed text-3xl tracking-[1px] uppercase">
             {name}
           </p>
