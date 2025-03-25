@@ -13,7 +13,7 @@ const InputPlanetCheckbox = ({ planet }: InputPlanetCheckboxProps) => {
     <div className="relative">
       <input
         type="radio"
-        name="planet"
+        name="destination"
         value={name}
         id={name}
         className="peer absolute inset-0 hidden"

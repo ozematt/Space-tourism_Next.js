@@ -37,7 +37,7 @@ export type State = {
 const Reservation = ({ step }: ReservationProps) => {
   const [state, formAction, isPending] = useActionState<State, FormData>(
     formSubmit,
-    {} as State,
+    { nextStep: 1 } as State,
   );
 
   console.log(state);
@@ -56,30 +56,35 @@ const Reservation = ({ step }: ReservationProps) => {
           <input type="hidden" name="step" value={step} />
 
           {step === "step01" && (
-            <div className="my-8 md:my-[67px]">
-              <FormStepTitle />
-              <div className="mt-12 space-y-8 md:mt-[67px] md:space-y-12">
-                <FormStepOne {...state} />
+            <>
+              <div className="my-8 md:my-[67px]">
+                <FormStepTitle />
+                <div className="mt-12 space-y-8 md:mt-[67px] md:space-y-12">
+                  <FormStepOne {...state} />
+                </div>
               </div>
-              {/* <div className="pt-[70px]">
-                <FormButtonPanel step={step} isPending={isPending} />
-              </div> */}
-            </div>
+              <div className="absolute bottom-[-50%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
+                <FormButtonPanel
+                  step={step}
+                  isPending={isPending}
+                  errors={state.errors}
+                />
+              </div>
+            </>
           )}
           {step === "step02" && (
             <>
-              <FormStepTitle />
-              <div className="middle:mt-[50px] mt-[30px]">
-                <FormStepTwo />
+              <div className="middle:my-[67px] my-10">
+                <FormStepTitle />
+                <div className="middle:mt-[50px] mt-[30px]">
+                  <FormStepTwo />
+                </div>
               </div>
-              <div className="middle:pt-[70px] px-8 pt-[450px] md:px-0 md:pt-[50px]">
+              <div className="absolute bottom-[-40%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
                 <FormButtonPanel step={step} isPending={isPending} />
               </div>
             </>
           )}
-        </div>
-        <div className="absolute bottom-0 left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
-          <FormButtonPanel step={step} isPending={isPending} />
         </div>
       </Form>
     </div>

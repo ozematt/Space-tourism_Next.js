@@ -8,8 +8,8 @@ export const steps = [
   {
     step: "step02",
     title: "select planet",
-    stepHeader: "pick your destination",
-    description: "You have the options. Choose wisely where you want to go.",
+    stepHeader: "choose destination",
+    description: "You have options. Choose wisely where you want to go.",
   },
   {
     step: "step03",

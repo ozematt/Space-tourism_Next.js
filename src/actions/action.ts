@@ -17,6 +17,7 @@ export const formSubmit = async (
         email: formData.get("email"),
         phone: formData.get("phone"),
       });
+
       return {
         ...prevState,
         ...data,
@@ -29,6 +30,7 @@ export const formSubmit = async (
       const data = stepTwoSchema.parse({
         destination: formData.get("destination"),
       });
+
       return { ...prevState, ...data, errors: undefined, nextStep: 3 };
     }
 
