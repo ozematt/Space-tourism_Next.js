@@ -20,10 +20,10 @@ const InputPlanetCheckbox = ({ planet }: InputPlanetCheckboxProps) => {
       />
       <label
         htmlFor={name}
-        className="hover:bg-opacity-20 translate-all flex h-[130px] cursor-pointer flex-col rounded-[5px] p-4 ring-[.5px] duration-500 ease-in-out peer-checked:bg-white/10 peer-checked:ring-2 hover:bg-white/10"
+        className="hover:bg-opacity-20 translate-all middle:h-[130px] relative flex cursor-pointer flex-col rounded-[5px] p-4 ring-[.5px] duration-500 ease-in-out peer-checked:bg-white/10 peer-checked:ring-2 hover:bg-white/10"
       >
         {/* Planet */}
-        <div className="flex w-full justify-between">
+        <div className="middle:justify-between flex w-full">
           <Image
             src={image}
             width={40}
@@ -31,26 +31,26 @@ const InputPlanetCheckbox = ({ planet }: InputPlanetCheckboxProps) => {
             alt={imageAlt}
             className="size-10 rounded-full"
           />
-          <p className="font-barlow-condensed text-3xl tracking-[1px] uppercase">
+          <p className="font-barlow-condensed middle:text-3xl max-middle:leading-4 mb-2 pl-2 text-lg tracking-[1px] uppercase">
             {name}
           </p>
         </div>
 
         {/* Info */}
-        <div className="mt-6 flex justify-between">
+        <div className="middle:static middle:pt-0 middle:pr-0 middle:pl-0 max-middle:flex-row-reverse middle:mt-6 absolute inset-0 mt-1 flex justify-between pt-8 pr-4 pl-16">
           <div>
-            <p className="font-barlow-condensed text-[10px] leading-2.5 tracking-[.5px] uppercase">
+            <p className="font-barlow-condensed middle:block hidden text-[10px] leading-2.5 tracking-[.5px] uppercase">
               est. travel time
             </p>
-            <p className="font-barlow-condensed text-lg tracking-[.5px] uppercase">
+            <p className="font-barlow-condensed middle:text-lg text-base tracking-[.5px] uppercase">
               {travelTime}
             </p>
           </div>
           <div className="text-right">
-            <p className="font-barlow-condensed text-[10px] leading-2.5 tracking-[.5px] uppercase">
+            <p className="font-barlow-condensed middle:block hidden text-[10px] leading-2.5 tracking-[.5px] uppercase">
               cost
             </p>
-            <p className="font-barlow-condensed text-lg font-bold tracking-[.5px] uppercase">
+            <p className="font-barlow-condensed middle:text-lg middle:font-bold text-base tracking-[.5px] uppercase">
               {cost} $
             </p>
           </div>

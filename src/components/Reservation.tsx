@@ -1,6 +1,8 @@
 "use client";
 import Form from "next/form";
 import {
+  FormBackground,
+  FormButtonPanel,
   FormStepOne,
   FormStepTitle,
   FormStepTwo,
@@ -9,7 +11,6 @@ import {
 } from ".";
 import { useActionState } from "react";
 import { formSubmit } from "@/actions/action";
-import Link from "next/link";
 
 export type StepNumbers = "step01" | "step02" | "step03" | "step04" | "step05";
 
@@ -47,51 +48,37 @@ const Reservation = ({ step }: ReservationProps) => {
 
       <Form
         action={formAction}
-        className="flex w-full flex-col max-md:h-[500px] md:mx-auto md:max-w-[450px] md:pt-[54px]"
+        className="middle:pt-[54px] flex w-full flex-col max-md:h-[500px] md:mx-auto md:max-w-[450px] md:pt-8"
       >
         <div className="top-[120px] left-[50%] mx-auto w-[90%] px-6 py-10 ring-[.5px] ring-white/20 max-md:absolute max-md:transform-[translateX(-50%)] md:w-full md:max-w-[450px] md:p-0 md:ring-0">
-          <div className="absolute inset-0 -z-10 opacity-100 backdrop-blur-[10px] md:opacity-0" />
-          <div className="absolute inset-0 -z-20 bg-[url(/reserve/background-reserve-tablet.webp)] bg-cover opacity-90 md:opacity-0" />
+          <FormBackground />
+
           <FormStepTitle />
 
           <input type="hidden" name="step" value={step} />
 
           {step === "step01" && (
-            <div className="mt-[67px] space-y-12">
-              <FormStepOne {...state} />
-            </div>
+            <>
+              <div className="mt-[67px] space-y-12">
+                <FormStepOne {...state} />
+              </div>
+              <div className="px-8 pt-[450px] md:px-0 md:pt-[70px]">
+                <FormButtonPanel step={step} isPending={isPending} />
+              </div>
+            </>
           )}
           {step === "step02" && (
-            <div className="mt-[50px]">
-              <FormStepTwo />
-            </div>
+            <>
+              <div className="middle:mt-[50px] mt-[30px]">
+                <FormStepTwo />
+              </div>
+              <div className="middle:pt-[70px] px-8 pt-[450px] md:px-0 md:pt-[50px]">
+                <FormButtonPanel step={step} isPending={isPending} />
+              </div>
+            </>
           )}
         </div>
-
-        <div className="flex w-full justify-end px-8 pt-[450px] md:px-0 md:pt-[70px]">
-          <Link
-            href={`/reserve/${step.slice(0, 5)}${Number(step[5]) - 1}`}
-            className={`${step === "step02" || step === "step03" || step === "step04" ? "block" : "hidden"} w-[170px]`}
-          >
-            <button
-              className={`font-barlow-condensed test-sm shrink-0 cursor-pointer py-2.5 pr-4.5 font-bold tracking-[.5px] text-white uppercase sm:text-xl`}
-            >
-              go back
-            </button>
-          </Link>
-          <div className="my-auto w-full border-t-1 border-white/50" />
-          <button
-            type="submit"
-            className="font-barlow-condensed test-sm shrink-0 rounded-[5px] bg-white/90 px-4.5 py-2.5 font-bold tracking-[.5px] text-black uppercase ring-1 sm:text-xl"
-            disabled={isPending}
-          >
-            {/* <Link
-              href={state.errors ? "" : `/reserve/step0${Number(step[5]) + 1}`}
-            > */}
-            {step === "step04" ? "confirm" : "next step"}
-            {/* </Link> */}
-          </button>
-        </div>
+        {/* <FormButtonPanel step={step} isPending={isPending} /> */}
       </Form>
     </div>
   );
