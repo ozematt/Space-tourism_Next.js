@@ -41,16 +41,6 @@ const Reservation = ({ step }: ReservationProps) => {
     formSubmit,
     { nextStep: 1 } as State,
   );
-  useEffect(() => {
-    // if (!state || state.nextStep === 1) return;
-
-    const storedState = localStorage.getItem("formState");
-    const actualState = storedState ? JSON.parse(storedState) : {};
-
-    const newState = { ...actualState, ...state };
-    localStorage.setItem("formState", JSON.stringify(newState));
-  }, [state]);
-  console.log(state);
 
   useEffect(() => {
     if (state.nextStep === 2) {
