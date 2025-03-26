@@ -110,7 +110,7 @@ const Reservation = ({ step }: ReservationProps) => {
             <>
               <div className="my-8 md:my-[67px]">
                 <FormStepTitle />
-                <div className="middle:mt-[50px] mt-[30px]">
+                <div className="middle:mt-[42px] mt-[30px]">
                   <FormStepFour />
                 </div>
               </div>

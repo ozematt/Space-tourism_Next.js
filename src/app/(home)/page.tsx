@@ -26,7 +26,7 @@ export default function Home() {
         </div>
 
         <Link
-          href="/reserve"
+          href="/reserve/step01"
           className="relative flex size-36 cursor-pointer max-xl:mx-auto max-xl:mt-[66px] sm:size-64 xl:my-auto"
         >
           <div className="absolute h-full w-full rounded-full bg-transparent hover:animate-ping hover:bg-white" />
