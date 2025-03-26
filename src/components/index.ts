@@ -27,6 +27,7 @@ export { default as FormStepTwo } from "./FormStepTwo";
 export { default as InputPlanetCheckbox } from "./InputPlanetCheckbox";
 export { default as FormButtonPanel } from "./FormButtonPanel";
 export { default as FormBackground } from "./FormBackground";
+export { default as FormStepThree } from "./FormStepThree";
 
 export type { DestinationProps, PlanetName } from "./Destination";
 export type { CrewMemberProps, CrewMemberName } from "./CrewMember";

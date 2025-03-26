@@ -4,6 +4,7 @@ import {
   FormBackground,
   FormButtonPanel,
   FormStepOne,
+  FormStepThree,
   FormStepTitle,
   FormStepTwo,
   PlanetName,
@@ -84,6 +85,19 @@ const Reservation = ({ step }: ReservationProps) => {
                 <FormStepTitle />
                 <div className="middle:mt-[50px] mt-[30px]">
                   <FormStepTwo {...state} />
+                </div>
+              </div>
+              <div className="absolute bottom-[-40%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
+                <FormButtonPanel step={step} isPending={isPending} />
+              </div>
+            </>
+          )}
+          {step === "step03" && (
+            <>
+              <div className="middle:my-[67px] my-10">
+                <FormStepTitle />
+                <div className="middle:mt-[50px] mt-[30px]">
+                  <FormStepThree />
                 </div>
               </div>
               <div className="absolute bottom-[-40%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
