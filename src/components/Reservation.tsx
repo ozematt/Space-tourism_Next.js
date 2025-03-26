@@ -3,6 +3,7 @@ import Form from "next/form";
 import {
   FormBackground,
   FormButtonPanel,
+  FormStepFour,
   FormStepOne,
   FormStepThree,
   FormStepTitle,
@@ -98,6 +99,19 @@ const Reservation = ({ step }: ReservationProps) => {
                 <FormStepTitle />
                 <div className="middle:mt-[50px] mt-[30px]">
                   <FormStepThree />
+                </div>
+              </div>
+              <div className="absolute bottom-[-40%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
+                <FormButtonPanel step={step} isPending={isPending} />
+              </div>
+            </>
+          )}
+          {step === "step04" && (
+            <>
+              <div className="my-8 md:my-[67px]">
+                <FormStepTitle />
+                <div className="middle:mt-[50px] mt-[30px]">
+                  <FormStepFour />
                 </div>
               </div>
               <div className="absolute bottom-[-40%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
