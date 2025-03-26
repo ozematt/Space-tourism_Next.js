@@ -94,7 +94,7 @@ const Reservation = ({ step }: ReservationProps) => {
           )}
           {step === "step03" && (
             <>
-              <div className="middle:my-[67px] my-10">
+              <div className="my-8 md:my-[67px]">
                 <FormStepTitle />
                 <div className="middle:mt-[50px] mt-[30px]">
                   <FormStepThree />

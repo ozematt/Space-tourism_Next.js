@@ -25,6 +25,24 @@ export const steps = [
   },
 ] as const;
 
+export const addOns = [
+  {
+    title: "Lunar Hotel",
+    subtitle: " Lunar hotel on the Mars",
+    price: "50k",
+  },
+  {
+    title: "Mars Colony Stay",
+    subtitle: "Accommodation in a Mars base",
+    price: "150k",
+  },
+  {
+    title: "Titan Exploration Camp",
+    subtitle: "Stay in a special research module",
+    price: "200k",
+  },
+] as const;
+
 // export const stepsT = [
 //   {
 //     step: 5,
