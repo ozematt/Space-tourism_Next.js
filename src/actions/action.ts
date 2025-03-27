@@ -59,6 +59,30 @@ export const formSubmit = async (
 
     return { success: "Jest GIT!", nextStep: 3, errors: undefined };
   }
+
+  if (step === "step03") {
+    const parsedData = stepThreeSchema.safeParse({
+      destination: formData.get("destination"),
+    });
+
+    // const currentState = {
+    //   ...prevState,
+    //   destination: formData.get("destination") || prevState.destination,
+    // };
+
+    if (!parsedData.success) {
+      const errors = convertZodErrors(parsedData.error);
+      return {
+        // ...currentState,
+        errors: errors,
+      };
+    }
+
+    // added to database
+
+    return { success: "Jest GIT!", nextStep: 3, errors: undefined };
+  }
+
   return { ...prevState };
 };
 
