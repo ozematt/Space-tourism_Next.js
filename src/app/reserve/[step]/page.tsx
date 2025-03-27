@@ -10,6 +10,9 @@ export type StepPageProps = {
     step: StepNumbers;
   }>;
 };
+export const metadata = {
+  title: "Reservation · Space Tourism",
+};
 
 const StepPage = async ({ params }: StepPageProps) => {
   const step = (await params).step;

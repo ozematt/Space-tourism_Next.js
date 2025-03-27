@@ -30,6 +30,7 @@ export { default as FormBackground } from "./FormBackground";
 export { default as FormStepThree } from "./FormStepThree";
 export { default as InputAddOnsCheckbox } from "./InputAddOnsCheckbox";
 export { default as FormStepFour } from "./FormStepFour";
+export { default as FormStepCompleted } from "./FormStepCompleted";
 
 export type { DestinationProps, PlanetName } from "./Destination";
 export type { CrewMemberProps, CrewMemberName } from "./CrewMember";

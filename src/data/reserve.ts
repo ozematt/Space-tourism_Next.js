@@ -42,12 +42,3 @@ export const addOns = [
     price: "200k",
   },
 ] as const;
-
-// export const stepsT = [
-//   {
-//     step: 5,
-//     title: "thank you!",
-//     description:
-//       "Thank you for choosing Space Tourism! Your booking has been successfully confirmed. You’re one step closer to an unforgettable adventure beyond the stars! ",
-//   },
-// ] as const;
