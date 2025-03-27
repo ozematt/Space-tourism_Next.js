@@ -7,7 +7,9 @@ export const stepOneSchema = z.object({
 });
 
 export const stepTwoSchema = z.object({
-  destination: z.enum(["moon", "mars", "europa", "titan"]),
+  destination: z.enum(["moon", "mars", "europa", "titan"], {
+    errorMap: () => ({ message: "You must choose a destination!" }),
+  }),
 });
 
 export const stepThreeSchema = z.object({

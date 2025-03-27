@@ -33,16 +33,19 @@ export type State = {
   phone?: FormDataEntryValue | string;
   destination?: PlanetName | FormDataEntryValue;
   addOns?: AddOns;
-  errors?: Record<string, string[] | undefined>;
+  errors?: { [key: string]: string };
+  success?: string;
   nextStep?: number;
 };
 
 const Reservation = ({ step }: ReservationProps) => {
   const router = useRouter();
+
   const [state, formAction, isPending] = useActionState<State, FormData>(
     formSubmit,
     { nextStep: 1 } as State,
   );
+  console.log(state);
 
   useEffect(() => {
     if (state.nextStep === 2) {
@@ -65,6 +68,7 @@ const Reservation = ({ step }: ReservationProps) => {
         <div className="top-[120px] left-[50%] w-[90%] px-6 ring-[.5px] ring-white/20 max-md:absolute max-md:transform-[translateX(-50%)] md:w-full md:max-w-[450px] md:p-0 md:ring-0">
           <FormBackground />
 
+          {/* step param added to form data */}
           <input type="hidden" name="step" value={step} />
 
           {step === "step01" && (

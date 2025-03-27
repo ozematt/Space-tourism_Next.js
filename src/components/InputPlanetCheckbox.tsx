@@ -2,27 +2,15 @@
 import { planets } from "@/data";
 import { PlanetName } from "./Destination";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 type InputPlanetCheckboxProps = {
   planet: PlanetName;
-  defaultValue?: FormDataEntryValue | PlanetName;
+
+  error?: string;
 };
 
-const InputPlanetCheckbox = ({
-  planet,
-  defaultValue,
-}: InputPlanetCheckboxProps) => {
+const InputPlanetCheckbox = ({ planet, error }: InputPlanetCheckboxProps) => {
   const { name, image, imageAlt, travelTime, cost } = planets[planet];
-
-  const [checked, setChecked] = useState(false);
-  console.log(name, checked);
-
-  useEffect(() => {
-    if (defaultValue === name) {
-      setChecked(true);
-    }
-  }, [defaultValue, name]);
 
   return (
     <div className="relative">
@@ -31,13 +19,11 @@ const InputPlanetCheckbox = ({
         name="destination"
         value={name}
         id={name}
-        checked={checked}
-        onChange={() => setChecked(true)}
         className="peer absolute inset-0 hidden"
       />
       <label
         htmlFor={name}
-        className="hover:bg-opacity-20 translate-all middle:h-[130px] relative flex cursor-pointer flex-col rounded-[5px] p-4 ring-[.5px] duration-500 ease-in-out peer-checked:bg-white/10 peer-checked:ring-2 hover:bg-white/10"
+        className={` ${error ? "ring-2 ring-red-500 peer-checked:ring-white" : "ring-[.5px]"} hover:bg-opacity-20 translate-all middle:h-[130px] relative flex cursor-pointer flex-col rounded-[5px] p-4 duration-500 ease-in-out peer-checked:bg-white/10 peer-checked:ring-2 hover:bg-white/10`}
       >
         {/* Planet */}
         <div className="middle:justify-between flex w-full">
