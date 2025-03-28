@@ -11,11 +11,3 @@ export const stepTwoSchema = z.object({
     errorMap: () => ({ message: "You must choose a destination!" }),
   }),
 });
-
-export const stepThreeSchema = z.object({
-  addOns: z.object({
-    lunarHotel: z.boolean(),
-    marsColony: z.boolean(),
-    titanCamp: z.boolean(),
-  }),
-});

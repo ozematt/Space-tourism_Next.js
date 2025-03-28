@@ -22,7 +22,7 @@ const InputAddOnsCheckbox = ({
         <div className="flex items-center">
           <input
             type="checkbox"
-            value="1"
+            name={title}
             className="translate-all size-4 cursor-pointer appearance-none rounded-[5px] bg-center bg-no-repeat ring-1 duration-500 ease-in-out checked:bg-green-700 checked:bg-[url(/reserve/tick.svg)] sm:size-6"
             onChange={() => setChecked(!checked)}
           />
