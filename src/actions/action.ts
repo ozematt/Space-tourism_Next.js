@@ -3,6 +3,8 @@
 import { State } from "@/components/Reservation";
 import { convertZodErrors } from "@/lib/errorHandlers";
 import { stepOneSchema, stepTwoSchema } from "@/lib/schema";
+import { redirect } from "next/navigation";
+// import { redirect } from "next/dist/server/api-utils";
 
 export const formSubmit = async (
   prevState: State,
@@ -11,17 +13,13 @@ export const formSubmit = async (
   const step = formData.get("step")?.toString(); //received step param
 
   if (step === "step01") {
-    const parsedData = stepOneSchema.safeParse({
-      name: formData.get("name"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-    });
+    const data = Object.fromEntries(formData.entries());
+
+    const parsedData = stepOneSchema.safeParse(data);
 
     const currentState = {
       ...prevState,
-      name: formData.get("name") || prevState.name,
-      email: formData.get("email") || prevState.email,
-      phone: formData.get("phone") || prevState.phone,
+      ...data,
     };
 
     if (!parsedData.success) {
@@ -33,8 +31,8 @@ export const formSubmit = async (
     }
 
     // added to database
-
-    return { success: "Jest GIT!", nextStep: 2, errors: undefined };
+    redirect("/reserve/step02");
+    // return { success: "Jest GIT!", nextStep: 2, errors: undefined };
   }
 
   if (step === "step02") {
@@ -56,8 +54,8 @@ export const formSubmit = async (
     }
 
     // added to database
-
-    return { success: "Jest GIT!", nextStep: 3, errors: undefined };
+    redirect("/reserve/step03");
+    // return { success: "Jest GIT!", nextStep: 3, errors: undefined };
   }
 
   if (step === "step03") {

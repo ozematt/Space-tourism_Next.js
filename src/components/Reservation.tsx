@@ -11,9 +11,9 @@ import {
   PlanetName,
   StepNav,
 } from ".";
-import { useActionState, useEffect } from "react";
+import { useActionState } from "react";
 import { formSubmit } from "@/actions/action";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 export type StepNumbers = "step01" | "step02" | "step03" | "step04" | "step05";
 
@@ -39,7 +39,7 @@ export type State = {
 };
 
 const Reservation = ({ step }: ReservationProps) => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const [state, formAction, isPending] = useActionState<State, FormData>(
     formSubmit,
@@ -47,15 +47,15 @@ const Reservation = ({ step }: ReservationProps) => {
   );
   console.log(state);
 
-  useEffect(() => {
-    if (state.nextStep === 2) {
-      router.push("/reserve/step02");
-    } else if (state.nextStep === 3) {
-      router.push("/reserve/step03");
-    } else if (state.nextStep === 4) {
-      router.push("/reserve/step04");
-    }
-  }, [state.nextStep, router]);
+  // useEffect(() => {
+  //   if (state.nextStep === 2) {
+  //     router.push("/reserve/step02");
+  //   } else if (state.nextStep === 3) {
+  //     router.push("/reserve/step03");
+  //   } else if (state.nextStep === 4) {
+  //     router.push("/reserve/step04");
+  //   }
+  // }, [state.nextStep, router]);
 
   return (
     <div className="relative mx-auto mt-[50px] h-full w-full max-w-[945px] ring-white/20 sm:mt-[100px] md:flex md:pr-8 md:ring-1 md:backdrop-blur-[10px]">
