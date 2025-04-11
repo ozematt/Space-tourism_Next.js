@@ -1,5 +1,5 @@
 "use client";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 // import Link from "next/link";
 
 type StemItem = {
@@ -13,14 +13,17 @@ type StepNavItemProps = {
 };
 
 const StepNavItem = ({ stepNumber, item }: StepNavItemProps) => {
-  const { step: paramStep } = useParams();
+  const pathname = usePathname();
+  const isActive = pathname === `/reserve/step0${stepNumber}`;
+
   const { step: itemStep, title } = item;
+  // console.log("paramStep", paramStep);
 
   return (
     <div className="flex items-center">
       {/* <Link href={`/reserve/step0${stepNumber}`}> */}
       <div
-        className={` ${paramStep === itemStep ? "bg-white text-black" : ""} font-bellefair grid size-[34px] place-items-center rounded-full uppercase ring-1 ring-white`}
+        className={` ${isActive ? "bg-white text-black" : ""} font-bellefair grid size-[34px] place-items-center rounded-full uppercase ring-1 ring-white`}
       >
         {stepNumber}
       </div>

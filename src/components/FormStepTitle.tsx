@@ -1,7 +1,6 @@
 "use client";
 
 import { steps } from "@/data";
-import { useParams } from "next/navigation";
 
 type StepItem = {
   step: string;
@@ -10,9 +9,14 @@ type StepItem = {
   description: string;
 };
 
-const FormStepTitle = () => {
-  const { step: paramStep } = useParams();
-  const actualStep = steps.find((step) => step.step === paramStep);
+type FormStepTitleProps = {
+  step: string;
+};
+
+const FormStepTitle = ({ step }: FormStepTitleProps) => {
+  const actualStep = steps.find((stepItem) => stepItem.step === step);
+  console.log(actualStep);
+
   const { stepHeader, description } = actualStep as StepItem;
 
   return (
