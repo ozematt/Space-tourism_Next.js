@@ -14,5 +14,5 @@ export const formActionStepFour = async (
   // added to database
 
   console.log(lunarHotel, marsColonyStay, titanExplorationCamp);
-  redirect("/reserve/step04");
+  redirect("/reserve/completed");
 };

@@ -31,13 +31,13 @@ const StepFourPage = () => {
           <FormBackground />
 
           <div className="my-8 md:my-[67px]">
-            <FormStepTitle step="step02" />
+            <FormStepTitle step="step04" />
             <div className="mt-12 space-y-8 md:mt-[67px] md:space-y-12">
               <FormStepFour />
             </div>
           </div>
           <div className="absolute bottom-[-50%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
-            <FormButtonPanel step="step02" isPending={isPending} />
+            <FormButtonPanel step="step04" isPending={isPending} />
           </div>
         </div>
       </Form>
