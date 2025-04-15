@@ -28,5 +28,4 @@ export const formActionStepTwo = async (
 
   // added to database
   redirect("/reserve/step03");
-  // return { success: "Jest GIT!", nextStep: 3, errors: undefined };
 };

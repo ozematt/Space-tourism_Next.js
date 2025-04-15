@@ -1,24 +1,26 @@
 "use client";
 
+import Form from "next/form";
+import { useActionState } from "react";
+import { formActionStepFour } from "./action";
+import { State } from "@/types";
 import {
   FormBackground,
   FormButtonPanel,
+  FormStepFour,
   FormStepTitle,
-  FormStepTwo,
   SectionBackground,
   SectionTitle,
   StepNav,
 } from "@/components";
-import { State } from "@/components/Reservation";
-import Form from "next/form";
-import { useActionState } from "react";
-import { formActionStepTwo } from "./action";
 
-const StepTwoPage = () => {
+const StepFourPage = () => {
   const [state, formAction, isPending] = useActionState<State, FormData>(
-    formActionStepTwo,
+    formActionStepFour,
     {} as State,
   );
+
+  console.log(state);
 
   return (
     <section className="h-screen">
@@ -41,7 +43,7 @@ const StepTwoPage = () => {
                 <div className="my-8 md:my-[67px]">
                   <FormStepTitle step="step02" />
                   <div className="mt-12 space-y-8 md:mt-[67px] md:space-y-12">
-                    <FormStepTwo {...state} />
+                    <FormStepFour />
                   </div>
                 </div>
                 <div className="absolute bottom-[-50%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
@@ -56,4 +58,4 @@ const StepTwoPage = () => {
   );
 };
 
-export default StepTwoPage;
+export default StepFourPage;

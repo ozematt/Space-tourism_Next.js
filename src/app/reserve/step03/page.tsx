@@ -3,8 +3,8 @@
 import {
   FormBackground,
   FormButtonPanel,
+  FormStepThree,
   FormStepTitle,
-  FormStepTwo,
   SectionBackground,
   SectionTitle,
   StepNav,
@@ -12,13 +12,14 @@ import {
 import { State } from "@/components/Reservation";
 import Form from "next/form";
 import { useActionState } from "react";
-import { formActionStepTwo } from "./action";
+import { formActionStepThree } from "./action";
 
-const StepTwoPage = () => {
+const StepThreePage = () => {
   const [state, formAction, isPending] = useActionState<State, FormData>(
-    formActionStepTwo,
+    formActionStepThree,
     {} as State,
   );
+  console.log(state);
 
   return (
     <section className="h-screen">
@@ -30,6 +31,7 @@ const StepTwoPage = () => {
       <div className="sm:px-6">
         <div className="relative mx-auto mt-[50px] h-full w-full max-w-[945px] ring-white/20 sm:mt-[100px] md:flex md:pr-8 md:ring-1 md:backdrop-blur-[10px]">
           <StepNav />
+
           <Form
             action={formAction}
             className="mx-auto flex w-full flex-col max-md:h-[500px] md:max-w-[450px]"
@@ -39,13 +41,13 @@ const StepTwoPage = () => {
 
               <>
                 <div className="my-8 md:my-[67px]">
-                  <FormStepTitle step="step02" />
+                  <FormStepTitle step="step03" />
                   <div className="mt-12 space-y-8 md:mt-[67px] md:space-y-12">
-                    <FormStepTwo {...state} />
+                    <FormStepThree />
                   </div>
                 </div>
                 <div className="absolute bottom-[-50%] left-0 mb-5 w-full px-8 md:static md:mb-0 md:px-0">
-                  <FormButtonPanel step="step02" isPending={isPending} />
+                  <FormButtonPanel step="step03" isPending={isPending} />
                 </div>
               </>
             </div>
@@ -56,4 +58,4 @@ const StepTwoPage = () => {
   );
 };
 
-export default StepTwoPage;
+export default StepThreePage;
