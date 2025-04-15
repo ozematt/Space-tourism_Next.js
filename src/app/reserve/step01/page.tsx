@@ -2,7 +2,7 @@
 
 import Form from "next/form";
 import { formActionStepOne } from "./actions";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { State } from "@/types";
 import {
   FormBackground,
@@ -17,6 +17,16 @@ const StepOnePage = () => {
     formActionStepOne,
     {} as State,
   );
+
+  console.log(state);
+
+  useEffect(() => {
+    if (!state.errors) {
+      localStorage.setItem("state", JSON.stringify(state));
+      return;
+    }
+    localStorage.removeItem("state");
+  }, [state]);
 
   return (
     <>
