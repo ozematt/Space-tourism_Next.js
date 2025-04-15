@@ -15,7 +15,6 @@ type FormStepTitleProps = {
 
 const FormStepTitle = ({ step }: FormStepTitleProps) => {
   const actualStep = steps.find((stepItem) => stepItem.step === step);
-  console.log(actualStep);
 
   const { stepHeader, description } = actualStep as StepItem;
 
