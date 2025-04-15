@@ -1,7 +1,7 @@
 "use client";
 import { planetsArr } from "@/data";
-import InputPlanetCheckbox from "./InputPlanetCheckbox";
-import { State } from "./Reservation";
+import { State } from "@/types";
+import { InputPlanetCheckbox } from ".";
 
 const FormStepTwo = (state: State) => {
   return (

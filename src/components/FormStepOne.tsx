@@ -1,6 +1,6 @@
 "use client";
+import { State } from "@/types";
 import { InputTextField } from ".";
-import { State } from "./Reservation";
 
 const FormStepOne = (state: State) => {
   return (

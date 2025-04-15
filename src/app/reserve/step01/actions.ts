@@ -1,8 +1,8 @@
 "use server";
 
-import { State } from "@/components/Reservation";
 import { convertZodErrors } from "@/lib/errorHandlers";
 import { stepOneSchema } from "@/lib/schema";
+import { State } from "@/types";
 import { redirect } from "next/navigation";
 
 export const formActionStepOne = async (

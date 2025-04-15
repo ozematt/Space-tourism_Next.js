@@ -1,5 +1,9 @@
 "use client";
 
+import Form from "next/form";
+import { formActionStepOne } from "./actions";
+import { useActionState } from "react";
+import { State } from "@/types";
 import {
   FormBackground,
   FormButtonPanel,
@@ -9,10 +13,6 @@ import {
   SectionTitle,
   StepNav,
 } from "@/components";
-import { State } from "@/components/Reservation";
-import Form from "next/form";
-import { formActionStepOne } from "./actions";
-import { useActionState } from "react";
 
 const StepOnePage = () => {
   const [state, formAction, isPending] = useActionState<State, FormData>(
