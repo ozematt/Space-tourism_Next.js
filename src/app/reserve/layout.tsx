@@ -1,5 +1,7 @@
+"use client";
+
 import { SectionBackground, SectionTitle } from "@/components";
-import React from "react";
+import { FormContextProvider } from "@/context/FormContext";
 
 const ReserveLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,7 +13,7 @@ const ReserveLayout = ({ children }: { children: React.ReactNode }) => {
 
       <div className="sm:px-6">
         <div className="relative mx-auto mt-[50px] h-full w-full max-w-[945px] ring-white/20 sm:mt-[100px] md:flex md:pr-8 md:ring-1 md:backdrop-blur-[10px]">
-          {children}
+          <FormContextProvider>{children}</FormContextProvider>
         </div>
       </div>
     </section>
