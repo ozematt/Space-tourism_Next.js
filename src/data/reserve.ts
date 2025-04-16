@@ -42,3 +42,10 @@ export const addOns = [
     price: "200k",
   },
 ] as const;
+
+export const planetCost = {
+  moon: "1 mln",
+  mars: "10 mln",
+  europa: "80 mln",
+  titan: "200 mln",
+} as const;

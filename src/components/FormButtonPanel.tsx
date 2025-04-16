@@ -22,7 +22,7 @@ const FormButtonPanel = ({ step, isPending }: FormButtonPanelProps) => {
 
       <button
         type="submit"
-        className="font-barlow-condensed test-sm relative shrink-0 rounded-[5px] bg-white/90 px-4.5 py-2.5 font-bold tracking-[.5px] text-black uppercase ring-1 sm:text-xl"
+        className="font-barlow-condensed test-sm relative shrink-0 cursor-pointer rounded-[5px] bg-white/90 px-4.5 py-2.5 font-bold tracking-[.5px] text-black uppercase ring-1 sm:text-xl"
         disabled={isPending}
       >
         {step === "step04" ? "confirm" : "next step"}

@@ -15,9 +15,9 @@ const defaultFormData: FormLocalStorage = {
   phone: "",
   destination: undefined,
   addOns: {
-    lunarHotel: false,
-    marsColony: false,
-    titanCamp: false,
+    "Lunar Hotel": false,
+    "Mars Colony Stay": false,
+    "Titan Exploration Camp": false,
   },
 };
 

@@ -1,5 +1,7 @@
 "use client";
+import { useFormContext } from "@/context/FormContext";
 import { useState } from "react";
+// import { PlanetName } from "./Destination";
 
 type InputAddOnsCheckboxProps = {
   title: string;
@@ -14,6 +16,13 @@ const InputAddOnsCheckbox = ({
 }: InputAddOnsCheckboxProps) => {
   const [checked, setChecked] = useState(false);
 
+  const { newFormData, updateFormData } = useFormContext();
+
+  const handleInputChange = () => {
+    setChecked(!checked);
+    updateFormData({ addOns: { ...newFormData.addOns, [title]: !checked } });
+  };
+
   return (
     <div
       className={`hover:bg-opacity-20 ${checked ? "bg-white/10" : ""} translate-all middle:h-[82px] relative flex flex-col rounded-[5px] px-5 py-3 ring-[.5px] duration-500 ease-in-out sm:px-6 sm:py-4`}
@@ -24,7 +33,8 @@ const InputAddOnsCheckbox = ({
             type="checkbox"
             name={title}
             className="translate-all size-4 cursor-pointer appearance-none rounded-[5px] bg-center bg-no-repeat ring-1 duration-500 ease-in-out checked:bg-green-700 checked:bg-[url(/reserve/tick.svg)] sm:size-6"
-            onChange={() => setChecked(!checked)}
+            onChange={handleInputChange}
+            // checked={newFormData.addOns[title] }
           />
 
           <div className="pl-4 sm:pl-6">

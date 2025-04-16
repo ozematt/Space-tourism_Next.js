@@ -18,9 +18,9 @@ export const formLocalStorageSchema = z.object({
   phone: z.string().optional(),
   destination: z.enum(["moon", "mars", "europa", "titan"]).optional(),
   addOns: z.object({
-    lunarHotel: z.boolean().optional(),
-    marsColony: z.boolean().optional(),
-    titanCamp: z.boolean().optional(),
+    "Lunar Hotel": z.boolean().optional(),
+    "Mars Colony Stay": z.boolean().optional(),
+    "Titan Exploration Camp": z.boolean().optional(),
   }),
 });
 

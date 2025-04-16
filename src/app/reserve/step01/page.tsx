@@ -17,7 +17,6 @@ const StepOnePage = () => {
     formActionStepOne,
     {} as State,
   );
-  console.log("Step01:", state);
 
   return (
     <>
