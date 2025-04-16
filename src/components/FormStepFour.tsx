@@ -7,6 +7,10 @@ const FormStepFour = () => {
   const { newFormData } = useFormContext();
 
   const addOnsChecked = Object.values(newFormData.addOns).includes(true);
+  const addOnsCost = newFormData.addOns.cost;
+  const destinationCost = newFormData.destination
+    ? planetCost[newFormData.destination]
+    : "";
 
   return (
     <>
@@ -23,10 +27,7 @@ const FormStepFour = () => {
               Change
             </Link>
           </div>
-          <p>
-            +${" "}
-            {newFormData.destination ? planetCost[newFormData.destination] : ""}
-          </p>
+          <p>+$ {destinationCost}</p>
         </div>
         {addOnsChecked ? (
           <div className="flex items-center justify-between px-6 sm:px-6">
@@ -42,7 +43,7 @@ const FormStepFour = () => {
               </Link>
             </div>
 
-            <p>+$ {newFormData.addOns.cost}k</p>
+            <p>+$ {addOnsCost}k</p>
           </div>
         ) : null}
 
@@ -59,7 +60,7 @@ const FormStepFour = () => {
           Total (per person)
         </p>
         <p className="font-barlow-condensed text-2xl font-bold tracking-[1px]">
-          +$ 5k
+          +$ {destinationCost} {addOnsCost}k
         </p>
       </div>
     </>
