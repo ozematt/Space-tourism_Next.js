@@ -1,3 +1,4 @@
+import { useFormContext } from "@/context/FormContext";
 import Link from "next/link";
 
 type FormButtonPanelProps = {
@@ -6,6 +7,8 @@ type FormButtonPanelProps = {
 };
 
 const FormButtonPanel = ({ step, isPending }: FormButtonPanelProps) => {
+  const { resetLocalStorage } = useFormContext();
+
   return (
     <div className="flex w-full justify-end">
       <Link
@@ -24,6 +27,7 @@ const FormButtonPanel = ({ step, isPending }: FormButtonPanelProps) => {
         type="submit"
         className="font-barlow-condensed test-sm relative shrink-0 cursor-pointer rounded-[5px] bg-white/90 px-4.5 py-2.5 font-bold tracking-[.5px] text-black uppercase ring-1 sm:text-xl"
         disabled={isPending}
+        onClick={step === "step04" ? resetLocalStorage : undefined}
       >
         {step === "step04" ? "confirm" : "next step"}
       </button>
