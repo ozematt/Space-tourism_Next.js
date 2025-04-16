@@ -1,8 +1,9 @@
 type InputTextFieldProps = {
   id: string;
   placeholder: string;
-  defaultValue?: FormDataEntryValue | string;
+  defaultValue?: string;
   error?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 const InputTextField = ({
@@ -10,6 +11,7 @@ const InputTextField = ({
   placeholder,
   defaultValue,
   error,
+  onChange,
 }: InputTextFieldProps) => {
   return (
     <div className="relative">
@@ -17,8 +19,9 @@ const InputTextField = ({
         type="text"
         id={id}
         name={id}
+        onChange={onChange}
         placeholder={placeholder}
-        defaultValue={(defaultValue as string) || ""}
+        defaultValue={defaultValue}
         className={` ${error ? "ring-red-500 focus:ring-red-500" : "ring-white focus:ring-white"} peer h-[40px] w-full rounded-[5px] pl-4 placeholder-transparent ring-1 focus:ring-2 focus:outline-none sm:h-[50px]`}
       />
       <label

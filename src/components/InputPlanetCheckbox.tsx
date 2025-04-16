@@ -1,16 +1,24 @@
 "use client";
 import { planets } from "@/data";
+// import { ChangeEventHandler } from "react";
 import { PlanetName } from "./Destination";
 import Image from "next/image";
+import { useFormContext } from "@/context/FormContext";
 
 type InputPlanetCheckboxProps = {
   planet: PlanetName;
-
   error?: string;
 };
 
 const InputPlanetCheckbox = ({ planet, error }: InputPlanetCheckboxProps) => {
   const { name, image, imageAlt, travelTime, cost } = planets[planet];
+
+  const { newFormData, updateFormData } = useFormContext();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.currentTarget.value;
+    updateFormData({ destination: value as PlanetName });
+  };
 
   return (
     <div className="relative">
@@ -19,6 +27,8 @@ const InputPlanetCheckbox = ({ planet, error }: InputPlanetCheckboxProps) => {
         name="destination"
         value={name}
         id={name}
+        onChange={handleInputChange}
+        defaultChecked={newFormData.destination === name}
         className="peer absolute inset-0 hidden"
       />
       <label
