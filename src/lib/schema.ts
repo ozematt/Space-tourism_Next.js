@@ -21,6 +21,7 @@ export const formLocalStorageSchema = z.object({
     "Lunar Hotel": z.boolean().optional(),
     "Mars Colony Stay": z.boolean().optional(),
     "Titan Exploration Camp": z.boolean().optional(),
+    cost: z.number().optional(),
   }),
 });
 

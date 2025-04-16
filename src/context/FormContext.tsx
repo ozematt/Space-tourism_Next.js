@@ -18,6 +18,7 @@ const defaultFormData: FormLocalStorage = {
     "Lunar Hotel": false,
     "Mars Colony Stay": false,
     "Titan Exploration Camp": false,
+    cost: 0,
   },
 };
 

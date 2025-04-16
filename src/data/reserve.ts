@@ -29,17 +29,17 @@ export const addOns = [
   {
     title: "Lunar Hotel",
     subtitle: " Lunar hotel on the Mars",
-    price: "50k",
+    price: 50,
   },
   {
     title: "Mars Colony Stay",
     subtitle: "Accommodation in a Mars base",
-    price: "150k",
+    price: 150,
   },
   {
     title: "Titan Exploration Camp",
     subtitle: "Stay in a special research module",
-    price: "200k",
+    price: 200,
   },
 ] as const;
 

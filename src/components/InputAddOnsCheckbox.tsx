@@ -1,12 +1,12 @@
 "use client";
 import { useFormContext } from "@/context/FormContext";
+import { addOns } from "@/data";
 import { useState } from "react";
-// import { PlanetName } from "./Destination";
 
 type InputAddOnsCheckboxProps = {
   title: string;
   subtitle: string;
-  price: string;
+  price: number;
 };
 
 const InputAddOnsCheckbox = ({
@@ -19,8 +19,30 @@ const InputAddOnsCheckbox = ({
   const { newFormData, updateFormData } = useFormContext();
 
   const handleInputChange = () => {
-    setChecked(!checked);
-    updateFormData({ addOns: { ...newFormData.addOns, [title]: !checked } });
+    const isNowChecked = !checked;
+
+    // aktualizujemy zaznaczenie
+    const updatedAddOns = {
+      ...newFormData.addOns,
+      [title]: isNowChecked,
+    };
+
+    const totalAddOnsCost = Object.entries(updatedAddOns)
+      .filter(([_, isChecked]) => isChecked)
+      .reduce((sum, [key]) => {
+        const addOn = addOns.find((a) => a.title === key);
+        return addOn ? sum + addOn.price : sum;
+      }, 0);
+
+    setChecked(isNowChecked);
+
+    updateFormData({
+      addOns: {
+        ...newFormData.addOns,
+        [title]: !checked,
+        cost: totalAddOnsCost,
+      },
+    });
   };
 
   return (
@@ -34,7 +56,7 @@ const InputAddOnsCheckbox = ({
             name={title}
             className="translate-all size-4 cursor-pointer appearance-none rounded-[5px] bg-center bg-no-repeat ring-1 duration-500 ease-in-out checked:bg-green-700 checked:bg-[url(/reserve/tick.svg)] sm:size-6"
             onChange={handleInputChange}
-            // checked={newFormData.addOns[title] }
+            // checked={newFormData.addOns?.[title as AddOnTitle] || false}
           />
 
           <div className="pl-4 sm:pl-6">
@@ -49,7 +71,7 @@ const InputAddOnsCheckbox = ({
 
         <p className="font-barlow-condensed text-base tracking-[.5px] sm:text-lg">
           {" "}
-          +$ {price}
+          +$ {price}k
         </p>
       </div>
     </div>
