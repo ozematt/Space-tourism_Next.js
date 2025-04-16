@@ -21,7 +21,7 @@ const InputAddOnsCheckbox = ({
   const handleInputChange = () => {
     const isNowChecked = !checked;
 
-    // aktualizujemy zaznaczenie
+    //
     const updatedAddOns = {
       ...newFormData.addOns,
       [title]: isNowChecked,
