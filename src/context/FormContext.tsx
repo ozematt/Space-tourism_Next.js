@@ -2,6 +2,7 @@ import { FormLocalStorage, formLocalStorageSchema } from "@/lib/schema";
 import {
   createContext,
   ReactNode,
+  useCallback,
   useContext,
   useEffect,
   useState,
@@ -34,9 +35,23 @@ export const FormContextProvider = ({ children }: { children: ReactNode }) => {
   const [newFormData, setNewFormData] =
     useState<FormLocalStorage>(defaultFormData);
 
+  const [dataLoaded, setDataLoaded] = useState(false);
+
   useEffect(() => {
     readFromLocalStorage();
+    setDataLoaded(true);
   }, []);
+
+  const saveToLocalStorage = useCallback(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newFormData));
+  }, [newFormData]);
+
+  // Save to local storage whenever newFormData changes
+  useEffect(() => {
+    if (dataLoaded) {
+      saveToLocalStorage();
+    }
+  }, [newFormData, dataLoaded, saveToLocalStorage]);
 
   // Function to read data from local storage and validate it
   const readFromLocalStorage = () => {
@@ -45,6 +60,7 @@ export const FormContextProvider = ({ children }: { children: ReactNode }) => {
     if (!dataString) {
       return setNewFormData(defaultFormData);
     }
+
     const validate = formLocalStorageSchema.safeParse(JSON.parse(dataString));
 
     if (!validate.success) {
@@ -61,10 +77,6 @@ export const FormContextProvider = ({ children }: { children: ReactNode }) => {
       ...prevData,
       ...newData,
     }));
-  };
-
-  const saveToLocalStorage = (data: FormLocalStorage) => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
   };
 
   const resetLocalStorage = () => {
