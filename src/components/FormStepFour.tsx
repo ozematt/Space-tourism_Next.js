@@ -1,6 +1,6 @@
 "use client";
 import { useFormContext } from "@/context/FormContext";
-import { addOns, planetCost } from "@/data";
+import { planetCost } from "@/data";
 import Link from "next/link";
 
 const FormStepFour = () => {
