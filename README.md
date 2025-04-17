@@ -1,6 +1,8 @@
 # 🪐 Space Tourism 🚀
 
-**Space Tourism** is a multi-page, responsive application based on a **Figma** design provided by [Frontend Mentor](https://www.frontendmentor.io/). The project was created to practice working with a modern tech stack, including **Next.js**, **TypeScript**, and **Tailwind CSS**.  
+**Space Tourism** is a multi-page, responsive application based on a **Figma** design provided by [Frontend Mentor](https://www.frontendmentor.io/). The project was created to practice working with a modern tech stack, including **Next.js**, **TypeScript**, and **Tailwind CSS**. 
+In addition to implementing the original design, I also integrated a custom multi-step form based on another external project from Frontend Mentor, which I adapted to match the look and feel of the Space Tourism site. The form is fully responsive and uses React Context API to manage global form state across steps.
+
 
 
 ## 🌍 Live Demo  
