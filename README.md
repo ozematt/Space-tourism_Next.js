@@ -60,13 +60,12 @@ To install and run the project locally, follow these steps:
 ## 📌 Features
 
 🌍 Multi-page navigation
+📝 Booking Form
 📱 Responsive design (mobile, tablet, desktop)
 🎨 Animations and page transitions
 
 
 ## 🚧 Features in progress
-
-📝 Booking Form – A user-friendly reservation system for space travel.
 
 
 ## 📜 License
