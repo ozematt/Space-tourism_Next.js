@@ -13,6 +13,7 @@ The application is available online on Netlify:
 ## 🛠️ Technologies  
 - **Next.js** – fast and efficient page rendering  
 - **TypeScript** – improved code organization and type safety  
+- **Contex API** – global state management
 - **Tailwind CSS** – quick component styling
 - **Frame Motion** - page animation
 - **Figma** – design reference for the application  
