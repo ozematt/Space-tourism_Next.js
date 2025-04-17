@@ -59,10 +59,10 @@ To install and run the project locally, follow these steps:
 
 ## 📌 Features
 
-🌍 Multi-page navigation
-📝 Booking Form
-📱 Responsive design (mobile, tablet, desktop)
-🎨 Animations and page transitions
+- 🌍 Multi-page navigation
+- 📝 Booking Form
+- 📱 Responsive design (mobile, tablet, desktop)
+- 🎨 Animations and page transitions
 
 
 ## 🚧 Features in progress
