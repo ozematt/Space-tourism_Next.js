@@ -67,6 +67,8 @@ To install and run the project locally, follow these steps:
 
 ## 🚧 Features in progress
 
+🤓 No features in progress at the moment.
+
 
 ## 📜 License
 
