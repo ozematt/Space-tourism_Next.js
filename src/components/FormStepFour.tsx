@@ -56,12 +56,12 @@ const FormStepFour = () => {
           <p className="font-barlow-condensed text-lg tracking-[.5px]">+$ 5k</p>
         </div>
       </div>
-      <div className="flex items-center justify-between px-6 pt-6 sm:px-6">
+      <div className="flex items-center justify-between px-6 sm:px-6">
         <p className="font-barlow-condensed text-base tracking-[.5px] sm:text-lg">
           Total (per person)
         </p>
         <p className="font-barlow-condensed text-2xl font-bold tracking-[1px]">
-          +$ {destinationCost} {addOnsCost}k
+          +$ {destinationCost} {addOnsCost ? addOnsCost + 5 : addOnsCost}k
         </p>
       </div>
     </>

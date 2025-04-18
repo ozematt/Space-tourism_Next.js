@@ -28,9 +28,9 @@ const StepFourPage = () => {
         <div className="top-[120px] left-[50%] w-[90%] px-6 ring-[.5px] ring-white/20 max-md:absolute max-md:transform-[translateX(-50%)] md:w-full md:max-w-[450px] md:p-0 md:ring-0">
           <FormBackground />
 
-          <div className="my-8 md:my-[67px]">
+          <div className="my-8 h-[415px] md:mt-[67px]">
             <FormStepTitle step="step04" />
-            <div className="mt-12 space-y-8 md:mt-[67px] md:space-y-12">
+            <div className="mt-12 space-y-8 md:mt-[35px] md:space-y-12">
               <FormStepFour />
             </div>
           </div>

@@ -31,7 +31,7 @@ const StepTwoPage = () => {
           <>
             <div className="my-8 md:my-[67px]">
               <FormStepTitle step="step02" />
-              <div className="mt-12 space-y-8 md:mt-[67px] md:space-y-12">
+              <div className="mt-12 space-y-8 md:mt-[36px] md:space-y-12">
                 <FormStepTwo {...state} />
               </div>
             </div>
