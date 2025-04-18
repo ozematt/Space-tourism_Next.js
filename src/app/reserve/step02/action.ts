@@ -26,6 +26,6 @@ export const formActionStepTwo = async (
     };
   }
 
-  // added to database
+  //added to database
   redirect("/reserve/step03");
 };
