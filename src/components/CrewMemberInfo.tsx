@@ -1,11 +1,7 @@
 import { crewMembers } from "@/data";
-import { CrewMemberName } from ".";
+import { CrewMemberProps } from ".";
 
-export type CrewMemberInfoProps = {
-  name: CrewMemberName;
-};
-
-const CrewMemberInfo = ({ name }: CrewMemberInfoProps) => {
+const CrewMemberInfo = ({ name }: CrewMemberProps) => {
   return (
     <div className="text-center xl:h-[630px] xl:pt-50 xl:text-left">
       <h4 className="font-bellefair text-lg uppercase opacity-50 sm:text-2xl xl:text-[32px]">

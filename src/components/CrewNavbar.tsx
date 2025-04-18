@@ -1,7 +1,8 @@
 "use client";
-import { crewMembersArr } from "@/data";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { crewMembersArr } from "@/data";
 
 const CrewNavbar = () => {
   const pathname = usePathname();

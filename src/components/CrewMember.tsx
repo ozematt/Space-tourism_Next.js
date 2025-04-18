@@ -1,9 +1,9 @@
 "use client";
 
-import { crewMembers } from "@/data";
 import Image from "next/image";
-import { CrewMemberInfo, CrewNavbar } from ".";
 import { motion } from "framer-motion";
+import { crewMembers } from "@/data";
+import { CrewMemberInfo, CrewNavbar } from ".";
 
 export type CrewMemberName = keyof typeof crewMembers;
 

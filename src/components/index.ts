@@ -17,7 +17,6 @@ export { default as CrewNavbar } from "./CrewNavbar";
 export { default as TechnologyInfo } from "./TechnologyInfo";
 export { default as TechnologyImage } from "./TechnologyImage";
 export { default as TechnologyNavbar } from "./TechnologyNavbar";
-export { default as Reservation } from "./Reservation";
 export { default as InputTextField } from "./InputTextField";
 export { default as FormStepTitle } from "./FormStepTitle";
 export { default as StepNavItem } from "./StepNavItem";
@@ -32,7 +31,7 @@ export { default as InputAddOnsCheckbox } from "./InputAddOnsCheckbox";
 export { default as FormStepFour } from "./FormStepFour";
 export { default as FormStepCompleted } from "./FormStepCompleted";
 
-export type { DestinationProps, PlanetName } from "./Destination";
 export type { CrewMemberProps, CrewMemberName } from "./CrewMember";
+export type { DestinationProps, PlanetName } from "./Destination";
 export type { NavLinkProps } from "./NavLink";
 export type { PageKeys } from "./SectionBackground";
