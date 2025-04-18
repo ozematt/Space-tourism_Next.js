@@ -13,12 +13,10 @@ import {
 } from "@/components";
 
 const StepFourPage = () => {
-  const [state, formAction, isPending] = useActionState<State, FormData>(
+  const [_state, formAction, isPending] = useActionState<State, FormData>( // eslint-disable-line @typescript-eslint/no-unused-vars
     formActionStepFour,
     {} as State,
   );
-
-  console.log(state);
 
   return (
     <>
