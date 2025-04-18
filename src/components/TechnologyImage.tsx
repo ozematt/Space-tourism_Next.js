@@ -1,8 +1,8 @@
 "use client";
 
-import { TechnologyStage, technologyStage } from "@/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { TechnologyStage, technologyStage } from "@/data";
 
 type TechnologyImageProps = {
   stage: TechnologyStage;

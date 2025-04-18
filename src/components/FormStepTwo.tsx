@@ -1,4 +1,5 @@
 "use client";
+
 import { planetsArr } from "@/data";
 import { State } from "@/types";
 import { InputPlanetCheckbox } from ".";

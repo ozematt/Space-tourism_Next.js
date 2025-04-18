@@ -1,8 +1,9 @@
 "use client";
-import { planets } from "@/data";
-import { PlanetName } from "./Destination";
+
 import Image from "next/image";
 import { useFormContext } from "@/context/FormContext";
+import { planets } from "@/data";
+import { PlanetName } from "./Destination";
 
 type InputPlanetCheckboxProps = {
   planet: PlanetName;

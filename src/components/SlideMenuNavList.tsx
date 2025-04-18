@@ -1,7 +1,7 @@
 "use client";
 
-import { navLinks } from "@/data";
 import Link from "next/link";
+import { navLinks } from "@/data";
 
 const SlideMenuNavList = () => {
   return (

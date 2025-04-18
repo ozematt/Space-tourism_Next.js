@@ -1,8 +1,9 @@
 "use client";
-import { planets, planetsArr } from "@/data";
+
 import Link from "next/link";
-import { PlanetName } from ".";
 import { usePathname } from "next/navigation";
+import { planets, planetsArr } from "@/data";
+import { PlanetName } from ".";
 
 const PlanetNavbar = () => {
   const pathname = usePathname();

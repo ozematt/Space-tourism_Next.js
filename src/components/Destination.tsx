@@ -1,5 +1,5 @@
-import { planets } from "@/data";
 import Image from "next/image";
+import { planets } from "@/data";
 import { PlanetInfo, PlanetNavbar } from ".";
 
 export type PlanetName = keyof typeof planets;

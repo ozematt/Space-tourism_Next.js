@@ -1,5 +1,5 @@
-import { TechnologyStage, technologyStageArr } from "@/data";
 import Link from "next/link";
+import { TechnologyStage, technologyStageArr } from "@/data";
 
 type TechnologyNavbarProps = {
   stage: TechnologyStage;

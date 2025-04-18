@@ -1,8 +1,8 @@
 "use client";
 
-import { backgroundImages } from "@/data";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
+import { backgroundImages } from "@/data";
 
 export type PageKeys = keyof typeof backgroundImages;
 

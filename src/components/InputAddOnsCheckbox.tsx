@@ -1,7 +1,8 @@
 "use client";
+
+import { useState } from "react";
 import { useFormContext } from "@/context/FormContext";
 import { addOns } from "@/data";
-import { useState } from "react";
 
 type InputAddOnsCheckboxProps = {
   title: string;
@@ -21,7 +22,6 @@ const InputAddOnsCheckbox = ({
   const handleInputChange = () => {
     const isNowChecked = !checked;
 
-    //
     const updatedAddOns = {
       ...newFormData.addOns,
       [title]: isNowChecked,

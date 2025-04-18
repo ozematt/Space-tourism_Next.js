@@ -1,6 +1,7 @@
 "use client";
-import { TechnologyStage, technologyStage } from "@/data";
+
 import { motion } from "framer-motion";
+import { TechnologyStage, technologyStage } from "@/data";
 
 type TechnologyInfoProps = {
   stage: TechnologyStage;

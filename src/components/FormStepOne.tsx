@@ -1,8 +1,9 @@
 "use client";
+
+import { useCallback } from "react";
+import { useFormContext } from "@/context/FormContext";
 import { State } from "@/types";
 import { InputTextField } from ".";
-import { useFormContext } from "@/context/FormContext";
-import { useCallback } from "react";
 
 const FormStepOne = (state: State) => {
   const { newFormData, updateFormData } = useFormContext();
