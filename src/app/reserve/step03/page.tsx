@@ -13,7 +13,7 @@ import {
 } from "@/components";
 
 const StepThreePage = () => {
-  const [state, formAction, isPending] = useActionState<State, FormData>(
+  const [_state, formAction, isPending] = useActionState<State, FormData>( // eslint-disable-line @typescript-eslint/no-unused-vars
     formActionStepThree,
     {} as State,
   );
