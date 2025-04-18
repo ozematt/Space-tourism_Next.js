@@ -28,7 +28,7 @@ const InputAddOnsCheckbox = ({
     };
 
     const totalAddOnsCost = Object.entries(updatedAddOns)
-      .filter(([_, isChecked]) => isChecked)
+      .filter(([, isChecked]) => isChecked)
       .reduce((sum, [key]) => {
         const addOn = addOns.find((a) => a.title === key);
         return addOn ? sum + addOn.price : sum;

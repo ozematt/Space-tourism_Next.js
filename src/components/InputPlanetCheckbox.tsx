@@ -1,6 +1,5 @@
 "use client";
 import { planets } from "@/data";
-// import { ChangeEventHandler } from "react";
 import { PlanetName } from "./Destination";
 import Image from "next/image";
 import { useFormContext } from "@/context/FormContext";
