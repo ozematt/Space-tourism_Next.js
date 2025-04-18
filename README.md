@@ -1,6 +1,7 @@
 # 🪐 Space Tourism 🚀
 
-**Space Tourism** is a multi-page, responsive application based on a **Figma** design provided by [Frontend Mentor](https://www.frontendmentor.io/). The project was created to practice working with a modern tech stack, including **Next.js**, **TypeScript**, and **Tailwind CSS**.  
+**Space Tourism** is a multi-page, responsive application based on a **Figma** design provided by [Frontend Mentor](https://www.frontendmentor.io/). The project was created to practice working with a modern tech stack, including **Next.js**, **TypeScript**, and **Tailwind CSS**. 
+In addition to implementing the original design, I also integrated a custom multi-step form based on another external project from Frontend Mentor, which I adapted to match the look and feel of the Space Tourism site. The form is fully responsive and uses React Context API to manage global form state across steps.
 
 
 ## 🌍 Live Demo  
@@ -11,6 +12,7 @@ The application is available online on Netlify:
 ## 🛠️ Technologies  
 - **Next.js** – fast and efficient page rendering  
 - **TypeScript** – improved code organization and type safety  
+- **Contex API** – global state management
 - **Tailwind CSS** – quick component styling
 - **Frame Motion** - page animation
 - **Figma** – design reference for the application  
@@ -56,14 +58,15 @@ To install and run the project locally, follow these steps:
 
 ## 📌 Features
 
-🌍 Multi-page navigation
-📱 Responsive design (mobile, tablet, desktop)
-🎨 Animations and page transitions
+- 🌍 Multi-page navigation
+- 📝 Booking Form
+- 📱 Responsive design (mobile, tablet, desktop)
+- 🎨 Animations and page transitions
 
 
 ## 🚧 Features in progress
 
-📝 Booking Form – A user-friendly reservation system for space travel.
+🤓 No features in progress at the moment.
 
 
 ## 📜 License
