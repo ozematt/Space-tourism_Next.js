@@ -12,6 +12,10 @@ import {
   StepNav,
 } from "@/components";
 
+export const metadata = {
+  title: "Reserve · Step One",
+};
+
 const StepOnePage = () => {
   const [state, formAction, isPending] = useActionState<State, FormData>(
     formActionStepOne,

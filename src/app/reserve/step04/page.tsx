@@ -12,6 +12,10 @@ import {
   StepNav,
 } from "@/components";
 
+export const metadata = {
+  title: "Reserve · Step Four",
+};
+
 const StepFourPage = () => {
   const [_state, formAction, isPending] = useActionState<State, FormData>( // eslint-disable-line @typescript-eslint/no-unused-vars
     formActionStepFour,
