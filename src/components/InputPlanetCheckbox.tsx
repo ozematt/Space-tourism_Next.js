@@ -11,15 +11,6 @@ type InputPlanetCheckboxProps = {
 };
 
 const InputPlanetCheckbox = ({ planet, error }: InputPlanetCheckboxProps) => {
-  const { name, image, imageAlt, travelTime, cost } = planets[planet];
-
-  const { newFormData, updateFormData } = useFormContext();
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.currentTarget.value;
-    updateFormData({ destination: value as PlanetName });
-  };
-
   return (
     <div className="relative">
       <input
