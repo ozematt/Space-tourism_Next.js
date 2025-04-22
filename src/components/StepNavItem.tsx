@@ -13,6 +13,11 @@ type StepNavItemProps = {
 };
 
 const StepNavItem = ({ stepNumber, item }: StepNavItemProps) => {
+  const pathname = usePathname();
+  const isActive = pathname === `/reserve/step0${stepNumber}`;
+
+  const { title } = item;
+
   return (
     <div className="flex items-center">
       <div
