@@ -7,6 +7,12 @@ import { planetCost } from "@/data";
 const FormStepFour = () => {
   const { newFormData } = useFormContext();
 
+  const addOnsChecked = Object.values(newFormData.addOns).includes(true);
+  const addOnsCost = newFormData.addOns.cost;
+  const destinationCost = newFormData.destination
+    ? planetCost[newFormData.destination]
+    : "";
+
   return (
     <>
       <div className="space-y-4 rounded-[5px] bg-white/10 py-4 ring-[.5px]">
